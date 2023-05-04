@@ -11,8 +11,8 @@ function CreateBot(){
     return (
         <div id="create-bot">
             <div className="right-side-items">
-                <ItemList />
-                <ItemList />
+                <ItemList subject="Assets"/>
+                <ItemList subject="Tracking"/>
             </div>
 
             <div>
