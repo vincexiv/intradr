@@ -1,0 +1,5 @@
+#navbar {
+    height: 5rem;
+    background-color: purple;
+    margin-bottom: calc(2*var(--margin-primary));
+}
