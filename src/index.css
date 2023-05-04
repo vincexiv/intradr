@@ -11,11 +11,14 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+
+  /* outline: solid red 0.1rem; */
 }
 
-body {
-  margin: 0;
-  box-sizing: borde;
+.border-primary {
+  border: 1rem solid var(--color-background);
+  margin: clamp(6px, 0.75vh, 8px);
+  border-radius: 0.5rem;
 }
 
 code {
