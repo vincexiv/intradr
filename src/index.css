@@ -1,5 +1,10 @@
 :root {
   font-size: clamp(12px, 1.5vh, 16px);
+  --color-background: white;
+  --color-primary: #D9D9D9;
+  --color-btn-default: blue;
+  --color-btn-accept: green;
+  --color-btn-reject: red; 
 }
 
 * {
