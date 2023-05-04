@@ -30,6 +30,12 @@ function CreateBot(){
                                 text="inspect variables"
                                 onBtnClick={()=>setAction(<InspectVariables />)} />
                         </li>
+                        <li className="margin-primary border-primary">
+                            <Button
+                                btnStyles={{}} 
+                                text="objective function"
+                                onBtnClick={()=>setAction(<InspectVariables />)} />
+                        </li>
                     </ul>
                 </div>
 
@@ -40,13 +46,19 @@ function CreateBot(){
                         <li className="margin-primary border-primary">
                             <Button
                                 btnStyles={{width: "10rem"}}
+                                text="set function"
+                                onBtnClick={()=>setAction(<DoYourMath />)} />
+                        </li>
+                        <li className="margin-primary border-primary">
+                            <Button
+                                btnStyles={{width: "10rem"}}
                                 text="backtest"
                                 onBtnClick={()=>setAction(<DoYourMath />)} />
                         </li>
                         <li className="margin-primary border-primary">
                             <Button
                                 btnStyles={{width: "10rem"}} 
-                                text="run"
+                                text="run bot"
                                 onBtnClick={()=>setAction(<InspectVariables />)} />
                         </li>
                     </ul>
