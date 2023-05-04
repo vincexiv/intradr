@@ -5,3 +5,8 @@
     min-height: 20rem;
     background-color: var(--color-primary);
 }
+
+#item-list h2 {
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+}
