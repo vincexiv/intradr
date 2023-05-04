@@ -1,10 +1,11 @@
 :root {
   font-size: clamp(12px, 1.5vh, 16px);
-  --color-background: white;
+  --color-background: rgb(240, 240, 240);
   --color-primary: #D9D9D9;
   --color-btn-default: blue;
   --color-btn-accept: green;
   --color-btn-reject: red; 
+  --margin-primary: 0.5rem;
 }
 
 * {
@@ -15,13 +16,17 @@
   /* outline: solid red 0.1rem; */
 }
 
+body {
+  background-color: var(--color-background);
+}
+
 .border-primary {
-  border: 0.5rem solid var(--color-background);
+  border: 0.1rem solid var(--color-primary);
   border-radius: 0.5rem;
 }
 
 .margin-primary {
-  margin: 0.3rem;
+  margin: var(--margin-primary);
 }
 
 code {
