@@ -1,6 +1,6 @@
 #do-your-math {
-    width: calc(50vw - 0.3rem);
-    height: calc(60vh - 0.3rem);
+    width: calc(50vw - 2*var(--margin-primary));
+    height: calc(60vh - 2*var(--margin-primary));
     padding: 1rem;
-    outline: 0.1rem solid var(--color-primary);
+    background-color: var(--color-primary);
 }
