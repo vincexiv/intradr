@@ -1,0 +1,6 @@
+#inspect-variables {
+    width: calc(50vw - 2*var(--margin-primary));
+    height: calc(60vh - 2*var(--margin-primary));
+    padding: 1rem;
+    background-color: var(--color-primary);
+}
