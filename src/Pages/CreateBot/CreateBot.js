@@ -20,20 +20,20 @@ function CreateBot(){
                     <ul className="actions">
                         <li className="margin-primary border-primary">
                             <Button
-                                btnStyles={{}}
+                                btnStyles={{minWidth: "10rem"}}
                                 text="create bot"
                                 onBtnClick={()=>setAction(<DoYourMath />)} />
                         </li>
                         <li className="margin-primary border-primary">
                             <Button
-                                btnStyles={{}} 
+                                btnStyles={{minWidth: "10rem"}} 
                                 text="inspect variables"
                                 onBtnClick={()=>setAction(<InspectVariables />)} />
                         </li>
                         <li className="margin-primary border-primary">
                             <Button
-                                btnStyles={{}} 
-                                text="objective function"
+                                btnStyles={{minWidth: "10rem"}} 
+                                text="set expectations"
                                 onBtnClick={()=>setAction(<InspectVariables />)} />
                         </li>
                     </ul>
@@ -46,19 +46,13 @@ function CreateBot(){
                         <li className="margin-primary border-primary">
                             <Button
                                 btnStyles={{width: "10rem"}}
-                                text="set function"
-                                onBtnClick={()=>setAction(<DoYourMath />)} />
-                        </li>
-                        <li className="margin-primary border-primary">
-                            <Button
-                                btnStyles={{width: "10rem"}}
                                 text="backtest"
                                 onBtnClick={()=>setAction(<DoYourMath />)} />
                         </li>
                         <li className="margin-primary border-primary">
                             <Button
                                 btnStyles={{width: "10rem"}} 
-                                text="run bot"
+                                text="start trading"
                                 onBtnClick={()=>setAction(<InspectVariables />)} />
                         </li>
                     </ul>
