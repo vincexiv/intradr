@@ -1,5 +1,7 @@
 #create-bot {
+    --val: calc(2*var(--margin-primary));
     display: flex;
+    padding: var(--val) var(--val) 0 var(--val);
 }
 
 #create-bot .right-side-items {
