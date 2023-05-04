@@ -16,9 +16,12 @@
 }
 
 .border-primary {
-  border: 1rem solid var(--color-background);
-  margin: clamp(6px, 0.75vh, 8px);
+  border: 0.5rem solid var(--color-background);
   border-radius: 0.5rem;
+}
+
+.margin-primary {
+  margin: 0.3rem;
 }
 
 code {
