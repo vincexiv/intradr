@@ -1,12 +1,12 @@
 import React from "react";
 import "./Button.css"
 
-function Button({btnType, text, callBackFunc}){
+function Button({btnStyles, btnType, text, onBtnClick}){
 
     return (
         <button className={btnType}
                 style={btnStyles}
-                onClick={()=>callBackFunc()}>
+                onClick={()=>onBtnClick()}>
             {text}
         </button>
     )
