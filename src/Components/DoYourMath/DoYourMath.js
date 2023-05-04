@@ -3,7 +3,7 @@ import "./DoYourMath.css"
 
 function DoYourMath(){
     return (
-        <textarea id="do-your-math">
+        <textarea id="do-your-math" className="border-primary margin-primary">
 
         </textarea>
     )
