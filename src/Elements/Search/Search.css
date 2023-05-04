@@ -1,0 +1,10 @@
+#search-bar form input {
+    outline: none;
+    padding: 0.5rem;
+}
+
+#search-bar form {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+}
