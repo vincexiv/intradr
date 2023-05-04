@@ -1,0 +1,20 @@
+button {
+    outline: none;
+    border: none;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button .default {
+    background-color: var(--color-btn-default);
+}
+
+button .accept {
+    background-color: var(--color-btn-accept);
+}
+
+button .reject {
+    background-color: var(--color-btn-reject);
+}
