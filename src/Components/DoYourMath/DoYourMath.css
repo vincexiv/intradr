@@ -1,0 +1,6 @@
+#do-your-math {
+    width: 45vw;
+    height: 60vh;
+    padding: 1rem;
+    outline: 0.1rem solid var(--color-primary);
+}
