@@ -10,3 +10,9 @@
     padding-left: 0.5rem;
     padding-top: 0.5rem;
 }
+
+#item-list #the-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
