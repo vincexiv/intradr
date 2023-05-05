@@ -72,13 +72,13 @@ function CreateBot(){
                         <li className="margin-primary border-primary">
                             <Button
                                 btnStyles={{minWidth: "10rem"}} 
-                                text="inspect variables"
+                                text="variables"
                                 onBtnClick={()=> openAction('inspect-variables')} />
                         </li>
                         <li className="margin-primary border-primary">
                             <Button
                                 btnStyles={{minWidth: "10rem"}} 
-                                text="set expectations"
+                                text="signals"
                                 onBtnClick={()=>openAction('do-your-math')} />
                         </li>
                     </ul>
