@@ -9,6 +9,7 @@
 #item-list h2 {
     padding-left: 0.5rem;
     padding-top: 0.5rem;
+    color: var(--color-text-h2);
 }
 
 #item-list #the-list {
