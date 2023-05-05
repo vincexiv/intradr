@@ -8,8 +8,9 @@ function ItemList({subject, itemList=[], clickActionName="Track", clickActionFun
     const theList = itemList?.map(item => {
         const btn = <Button 
                         key={`btn-${item.name}`}
-                        btnStyles={{padding: "0.2rem 0.5rem 0.2rem 0.5rem", fontSize: "0.8rem"}}
+                        btnStyles={{padding: "0.2rem 0.5rem 0.2rem 0.5rem", fontSize: "0.8rem", fontWeight: 900}}
                         onBtnClick={()=>clickActionFunction(item)}
+                        btnType={subject === "Assets"? "accept": "reject"}
                         text={clickActionName}/>
 
         return <ListItem key={`list-item-${item.name}`} btnElement={btn} text={item.name}/>

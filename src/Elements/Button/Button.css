@@ -7,20 +7,22 @@ button {
     padding-bottom: 0.5rem;
     cursor: pointer;
     margin-bottom: 0;
+    background-color: transparent;
 }
 
 button:hover {
     opacity: 0.9;
 }
 
-button .default {
+/* button.default {
     background-color: var(--color-btn-default);
+} */
+
+button.accept {
+    color: var(--color-btn-accept);
 }
 
-button .accept {
-    background-color: var(--color-btn-accept);
-}
-
-button .reject {
-    background-color: var(--color-btn-reject);
+button.reject {
+    color: var(--color-btn-reject);
+    
 }
