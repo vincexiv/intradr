@@ -9,6 +9,7 @@
 
 #search-bar #search-btn {
     width: 20%;
+    cursor: pointer;
 }
 
 #search-bar form {
