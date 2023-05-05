@@ -10,6 +10,7 @@
 #search-bar #search-btn {
     width: 20%;
     cursor: pointer;
+    min-width: max-content;
 }
 
 #search-bar form {
