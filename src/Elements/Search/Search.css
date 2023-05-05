@@ -3,8 +3,15 @@
     padding: 0.5rem;
 }
 
+#search-bar #search-content {
+    width: 80%;
+}
+
+#search-bar #search-btn {
+    width: 20%;
+}
+
 #search-bar form {
     margin: 1rem;
     display: flex;
-    flex-direction: column;
 }

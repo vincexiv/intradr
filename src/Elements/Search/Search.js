@@ -13,7 +13,7 @@ function Search({onSearchSubmit}){
         <div id="search-bar">
             <form onSubmit={onSubmit}>
                 <input id="search-content" type="text" className="border-primary margin-primiary"/>
-                <input type="submit" value="Search" className="border-primary margin-primiary"/>
+                <input id="search-btn" type="submit" value="Search" className="border-primary margin-primiary"/>
             </form>
         </div>
     )
