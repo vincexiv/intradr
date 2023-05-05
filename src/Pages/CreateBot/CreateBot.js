@@ -24,8 +24,6 @@ function CreateBot(){
     }
 
     function stopTracking(untrackedAsset){
-        console.log(componentState)
-
         const updatedTrackedAssets = componentState.trackedAssets.filter(asset => asset.name !== untrackedAsset.name)
         const updatedUntrackedAssets = [...componentState.untrackedAssets, untrackedAsset]
 
