@@ -1,0 +1,17 @@
+#signal {
+    width: calc(50vw - 2*var(--margin-primary));
+    height: calc(70vh - 2*var(--margin-primary));
+    padding: 1rem;
+    background-color: var(--color-primary);
+}
+
+#signal form {
+    display: flex;
+}
+
+#signal .signal-element {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
