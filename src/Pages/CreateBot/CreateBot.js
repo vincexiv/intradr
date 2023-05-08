@@ -4,12 +4,15 @@ import DoYourMath from "../../Components/DoYourMath/DoYourMath";
 import InspectVariables from "../../Components/InspectVariables/InspectVariables";
 import ItemList from "../../Components/ItemList/ItemList";
 import Button from "../../Elements/Button/Botton";
+import Signal from "../../Components/Signal/Signal";
+import Constraints from "../../Components/Constraints/Constraints";
 
 function CreateBot(){
     const [componentState, setComponentState] = useState({
         action: <DoYourMath />,
         untrackedAssets: [{name: "AAPL"}, {name: "MSFT"}, {name: "What"}],
-        trackedAssets: [{name: "ABC"}, {name: "DEF"}, {name: "GEH"}]
+        trackedAssets: [{name: "ABC"}, {name: "DEF"}, {name: "GEH"}],
+        constraintCount: 1
     })
 
     function startTracking(trackedAsset){
@@ -34,11 +37,49 @@ function CreateBot(){
         }))
     }
 
+    function updateConstraintCount(action){
+        if(action === "reduce"){
+            if(componentState.constraintCount > 1){
+                setComponentState(componentState => {
+                    const newCount = componentState.constraintCount--
+                    return {
+                        ...componentState,
+                        constraintCount: newCount
+                    }
+                })
+            }
+        }else if (action === "increase"){
+            setComponentState(componentState => {
+                const newCount = componentState.constraintCount++
+                return {
+                    ...componentState,
+                    constraintCount: newCount
+                }
+            })
+        }        
+    }
+
     function openAction(action){
         if(action === 'do-your-math'){
-            setComponentState(componentState => ({...componentState, action: <DoYourMath />}))
+            setComponentState(componentState => ({
+                ...componentState,
+                action: <DoYourMath />
+            }))
         }else if (action === 'inspect-variables'){
-            setComponentState(componentState => ({...componentState, action: <InspectVariables />}))
+            setComponentState(componentState => ({
+                ...componentState,
+                action: <InspectVariables />
+            }))
+        }else if (action === "update-signals"){
+            const constraints = <Constraints
+                                        count={componentState.constraintCount}
+                                        variables={["AAPL_return"]}
+                                        updateConstraintCount={updateConstraintCount}/>
+
+            setComponentState(componentState => ({
+                ...componentState,
+                action: <Signal constraints={constraints} updateConstraintCount={updateConstraintCount}/>
+            }))
         }
     }
 
@@ -77,7 +118,7 @@ function CreateBot(){
                             <Button
                                 btnStyles={{minWidth: "10rem"}} 
                                 text="signals"
-                                onBtnClick={()=>openAction('do-your-math')} />
+                                onBtnClick={()=>openAction('update-signals')} />
                         </li>
                     </ul>
                 </div>
