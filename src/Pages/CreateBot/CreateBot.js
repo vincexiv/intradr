@@ -71,11 +71,11 @@ function CreateBot(){
 
     function getActionComponent(){
         const actionName = componentState.action
-        if(actionName == "do-your-math"){
+        if(actionName === "do-your-math"){
             return <DoYourMath />
-        }else if(actionName == "inspect-variables"){
+        }else if(actionName === "inspect-variables"){
             return <InspectVariables />
-        }else if(actionName == "update-signals"){
+        }else if(actionName === "update-signals"){
             const constraints = <Constraints
                                         componentState={componentState}
                                         updateConstraintCount={updateConstraintCount}/> 
