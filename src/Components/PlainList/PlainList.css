@@ -1,8 +1,8 @@
-#available-variables {
+#plain-list {
     border: solid white 0.1rem;
     padding: 0.5rem;
 }
 
-#available-variables ul li {
+#plain-list ul li {
     list-style: none;
 }
