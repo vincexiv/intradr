@@ -4,6 +4,7 @@
     padding: 1rem;
     background-color: var(--color-primary);
     padding: 3rem;
+    overflow-y: auto;
 }
 
 #signal .signal-element-title {
