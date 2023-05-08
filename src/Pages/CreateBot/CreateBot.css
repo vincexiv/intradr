@@ -4,6 +4,16 @@
     padding: var(--val) var(--val) 0 var(--val);
 }
 
+#create-bot #right-side {
+    width: calc(25vw - 4*var(--margin-primary));
+    height: calc(85vh - 2*var(--margin-primary));
+    min-height: 20rem;
+    background-color: var(--color-primary);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
 #create-bot .right-side-items {
     padding: 0;
     margin: 0;

@@ -6,13 +6,16 @@ import ItemList from "../../Components/ItemList/ItemList";
 import Button from "../../Elements/Button/Botton";
 import Signal from "../../Components/Signal/Signal";
 import Constraints from "../../Components/Constraints/Constraints";
+import PlainList from "../../Components/PlainList/PlainList";
 
 function CreateBot(){
     const [componentState, setComponentState] = useState({
         action: <DoYourMath />,
         untrackedAssets: [{name: "AAPL"}, {name: "MSFT"}, {name: "What"}],
         trackedAssets: [{name: "ABC"}, {name: "DEF"}, {name: "GEH"}],
-        constraintCount: 1
+        constraintCount: 1,
+        variables: ["AAPL_return"],
+        bots: ["xiv_bot"]
     })
 
     function startTracking(trackedAsset){
@@ -143,7 +146,11 @@ function CreateBot(){
                 </div>
                 
             </div>
-            <ItemList />
+
+            <div id="right-side" className="border-primary margin-primary">
+                <PlainList componentState={componentState} variable="variables" title="Variables"/>
+                <PlainList componentState={componentState} variable="bots" title="Bots"/>
+            </div>
         </div>
     )
 }
