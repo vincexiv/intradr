@@ -75,8 +75,7 @@ function CreateBot(){
             }))
         }else if (action === "update-signals"){
             const constraints = <Constraints
-                                        count={componentState.constraintCount}
-                                        variables={["AAPL_return"]}
+                                        componentState={componentState}
                                         updateConstraintCount={updateConstraintCount}/>
 
             setComponentState(componentState => ({
