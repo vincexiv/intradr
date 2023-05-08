@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import "./Signal.css";
 import SelectOption from "../../Elements/SelectOption/SelectOption";
 import Button from "../../Elements/Button/Botton";
