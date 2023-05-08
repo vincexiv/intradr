@@ -105,7 +105,7 @@ function CreateBot(){
                         <li className="margin-primary border-primary">
                             <Button
                                 btnStyles={{minWidth: "10rem"}}
-                                text="create bot"
+                                text="build strategy"
                                 onBtnClick={()=>openAction('do-your-math')} />
                         </li>
                         <li className="margin-primary border-primary">
