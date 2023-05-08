@@ -1,6 +1,11 @@
 #plain-list {
     border: solid white 0.1rem;
-    padding: 0.5rem;
+    padding: 1rem;
+}
+
+#plain-list #plain-list-title {
+    padding-top: 0.5rem;
+    padding-bottom: 0.8rem;
 }
 
 #plain-list ul li {
