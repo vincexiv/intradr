@@ -114,12 +114,6 @@ function CreateBot(){
                         <li className="margin-primary border-primary">
                             <Button
                                 btnStyles={{minWidth: "10rem"}} 
-                                text="variables"
-                                onBtnClick={()=> openAction('inspect-variables')} />
-                        </li>
-                        <li className="margin-primary border-primary">
-                            <Button
-                                btnStyles={{minWidth: "10rem"}} 
                                 text="signals"
                                 onBtnClick={()=>openAction('update-signals')} />
                         </li>
