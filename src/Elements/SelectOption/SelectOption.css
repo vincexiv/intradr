@@ -1,0 +1,5 @@
+#select-option select {
+    outline: none;
+    border: var(--border-primary);
+    margin: 0;
+}
