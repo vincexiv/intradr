@@ -2,3 +2,11 @@
     margin-top: 0.6rem;
     margin-bottom: 0.6rem;
 }
+
+#constraints .constraint-input {
+    outline: none;
+    border: none;
+    padding: 0.2rem 0.7rem 0.2rem 0.7rem;
+    width: 9rem;
+    background-color: var(--color-background);
+}
