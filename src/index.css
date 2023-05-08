@@ -1,6 +1,7 @@
 :root {
   font-size: clamp(12px, 1.5vh, 16px);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgba(0, 0, 0, 0.8);
   --color-background: rgb(240, 240, 240);
   --color-primary: #D9D9D9;
   --color-text-h1: purple;
