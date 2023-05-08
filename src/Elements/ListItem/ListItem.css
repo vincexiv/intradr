@@ -5,6 +5,6 @@
     font-size: 0.7rem;
     margin-top: 0.05rem;
     margin-bottom: 0.05rem;
-    background-color: rgba(218, 165, 32, 0.5);
+    background-color: var(--color-gold);
     padding: 0.15rem 0.3rem 0.15rem 0.6rem;
 }
