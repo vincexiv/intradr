@@ -44,19 +44,17 @@ function CreateBot(){
         if(action === "reduce"){
             if(componentState.constraintCount > 1){
                 setComponentState(componentState => {
-                    const newCount = componentState.constraintCount--
                     return {
                         ...componentState,
-                        constraintCount: newCount
+                        constraintCount: componentState.constraintCount + 1
                     }
                 })
             }
         }else if (action === "increase"){
             setComponentState(componentState => {
-                const newCount = componentState.constraintCount++
                 return {
                     ...componentState,
-                    constraintCount: newCount
+                    constraintCount: componentState.constraintCount + 1
                 }
             })
         }        
