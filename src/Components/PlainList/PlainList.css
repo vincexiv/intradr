@@ -1,6 +1,8 @@
 #plain-list {
     border: solid white 0.1rem;
     padding: 1rem;
+    width: calc(20vw - 2*var(--margin-primary));
+    min-width: 13rem;
 }
 
 #plain-list #plain-list-title {

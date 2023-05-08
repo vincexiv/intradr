@@ -14,7 +14,7 @@
     flex-direction: column;
 }
 
-#create-bot .right-side-items {
+#create-bot #left-side {
     padding: 0;
     margin: 0;
     height: max-content;
@@ -30,3 +30,41 @@
     list-style: none;
 }
 
+
+
+@media only screen and (max-width: 70rem){
+    #create-bot {
+        display: grid;
+        row-gap: 2.3rem;
+        grid-template-areas: 
+                "c c"
+                "a b"
+                ;
+    }
+
+    #create-bot #signal,
+    #create-bot #do-your-math {
+        width: calc(100vw - 4rem);
+    }
+
+    #create-bot #left-side {
+        grid-area: a;
+    }
+
+    #create-bot #right-side {
+        grid-area: b;
+    }
+
+    #create-bot #middle-side {
+        grid-area: c;
+    }
+
+    #create-bot #left-side,
+    #create-bot #right-side {
+        width:max-content;
+        height: max-content;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}

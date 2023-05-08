@@ -86,7 +86,7 @@ function CreateBot(){
 
     return (
         <div id="create-bot">
-            <div className="right-side-items">
+            <div id="left-side">
                 <ItemList
                         subject="Assets"
                         clickActionName="Track"
@@ -99,7 +99,7 @@ function CreateBot(){
                         clickActionFunction={stopTracking}/>
             </div>
 
-            <div>
+            <div id="middle-side">
                 <div>
                     <ul className="actions">
                         <li className="margin-primary border-primary">
