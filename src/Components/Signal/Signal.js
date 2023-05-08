@@ -4,7 +4,7 @@ import SelectOption from "../../Elements/SelectOption/SelectOption";
 import Button from "../../Elements/Button/Botton";
 
 
-function Signal({constraints, updateConstraintCount, variables = ["AAPL_return"]}){
+function Signal({constraints, updateConstraintCount, variables = ["Portfolio_return"]}){
     function handleSubmit(e){
         e.preventDefault()
     }
@@ -28,12 +28,18 @@ function Signal({constraints, updateConstraintCount, variables = ["AAPL_return"]
                             <div>
                                 {constraints}
                             </div>
-                            <Button btnStyles={{}}
+                            <Button btnStyles={{marginTop: "1rem",
+                                    backgroundColor: "var(--color-background)",
+                                    border: "var(--border-primary)"}}
                                     text="Add Constraint"
                                     onBtnClick={(e) => updateConstraintCount("increase")}/>
                         </div>
                     </div>
-                    <input type="submit" value="Run Bot" onClick={handleSubmit}/>
+                    <Button btnStyles={{marginTop: "2.5rem",
+                                        backgroundColor: "var(--color-background)",
+                                        border: "var(--border-primary)"}}
+                            text="Run Bot"
+                            onBtnClick={handleSubmit} />
                 </div>
             </form>
         </div>

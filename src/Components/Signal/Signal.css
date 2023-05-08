@@ -14,7 +14,9 @@
 
 #signal form {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 4rem;
+    justify-content: left;
 }
 
 #signal #objective-function {
