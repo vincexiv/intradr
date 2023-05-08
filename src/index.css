@@ -6,6 +6,8 @@
   --color-primary: #D9D9D9;
   --color-text-h1: purple;
   --color-text-h2: purple;
+  --color-red: rgb(255, 50, 50);
+  --color-gold: rgba(218, 165, 32, 0.5);
   --color-btn-default: blue;
   --color-btn-accept: green;
   --color-btn-reject: red; 
