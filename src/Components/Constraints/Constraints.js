@@ -4,7 +4,6 @@ import Button from "../../Elements/Button/Botton";
 import SelectOption from "../../Elements/SelectOption/SelectOption";
 
 function Constraints({componentState, updateConstraintCount}){
-    console.log(componentState.constraintCount)
     
     return (
         <div id="constraints">
