@@ -3,10 +3,22 @@
     height: calc(70vh - 2*var(--margin-primary));
     padding: 1rem;
     background-color: var(--color-primary);
+    padding: 3rem;
+}
+
+#signal .signal-element-title {
+    font-size: 1.1rem;
+    padding: 0.5rem 0 0.5rem 0;
+    font-weight: 800;
 }
 
 #signal form {
     display: flex;
+    justify-content: space-around;
+}
+
+#signal #objective-function {
+    align-items:flex-start;
 }
 
 #signal .signal-element {

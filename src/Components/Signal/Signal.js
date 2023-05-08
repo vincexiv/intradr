@@ -10,21 +10,28 @@ function Signal({constraints, updateConstraintCount, variables = ["AAPL_return"]
     }
 
     return (
-        <div id="signal">
+        <div id="signal" className="border-primary margin-primary">
             <form onSubmit={handleSubmit}>
-                <div id="objective-function" className="signal-element">
-                    <SelectOption options={["maximize", "minimize"]}/>
-                    <SelectOption options={variables}/>
+  
+                <div>
+                    <p className="signal-element-title">Goal</p>
+                    <div id="objective-function" className="signal-element">
+                        <SelectOption options={["maximize", "minimize"]}/>
+                        <SelectOption options={variables}/>
+                    </div>
                 </div>
 
                 <div>
-                    <div id="subject-to">
-                        <div>
-                            {constraints}
+                    <div>
+                        <p className="signal-element-title">Constraints</p>
+                        <div id="subject-to">
+                            <div>
+                                {constraints}
+                            </div>
+                            <Button btnStyles={{}}
+                                    text="Add Constraint"
+                                    onBtnClick={(e) => updateConstraintCount("increase")}/>
                         </div>
-                        <Button btnStyles={{}}
-                                text="Add Constraint"
-                                onBtnClick={(e) => updateConstraintCount("increase")}/>
                     </div>
                     <input type="submit" value="Run Bot" onClick={handleSubmit}/>
                 </div>
