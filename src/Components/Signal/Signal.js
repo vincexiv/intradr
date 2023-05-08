@@ -14,7 +14,7 @@ function Signal({constraints, updateConstraintCount, variables = ["Portfolio_ret
             <form onSubmit={handleSubmit}>
   
                 <div>
-                    <p className="signal-element-title">Goal</p>
+                    <p className="signal-element-title">Function</p>
                     <div id="objective-function" className="signal-element">
                         <SelectOption options={["maximize", "minimize"]}/>
                         <SelectOption options={variables}/>

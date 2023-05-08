@@ -111,7 +111,7 @@ function CreateBot(){
                         <li className="margin-primary border-primary">
                             <Button
                                 btnStyles={{minWidth: "10rem"}} 
-                                text="signals"
+                                text="add signals"
                                 onBtnClick={()=>openAction('update-signals')} />
                         </li>
                     </ul>
