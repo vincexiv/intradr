@@ -11,12 +11,15 @@ function Constraints({componentState, updateConstraintCount}){
             {
                 Array.from(Array(componentState.constraintCount).keys()).map(index => {
                     return (
-                        <div key={index}>
+                        <div key={index} className="constraint-item">
                             <div className="signal-element">
                                 <SelectOption options={componentState.variables}/>
                                 <SelectOption options={[">", ">=", "<", "<=", "=", "!="]} />
                                 <SelectOption options={[]}/>
-                                <Button btnStyles={{}}
+                                <Button btnStyles={{padding: "0.2rem 0.4rem 0.2rem 0.4rem",
+                                                    color: "white",
+                                                    border: "var(--border-primary)",
+                                                    backgroundColor: "var(--color-red)"}}
                                         text="Remove"
                                         onBtnClick={()=>updateConstraintCount("reduce")}/>
                             </div>
