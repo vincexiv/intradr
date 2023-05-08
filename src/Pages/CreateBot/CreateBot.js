@@ -10,7 +10,7 @@ import PlainList from "../../Components/PlainList/PlainList";
 
 function CreateBot(){
     const [componentState, setComponentState] = useState({
-        action: <DoYourMath />,
+        action: "do-your-math",
         untrackedAssets: [{name: "AAPL"}, {name: "MSFT"}, {name: "What"}],
         trackedAssets: [{name: "ABC"}, {name: "DEF"}, {name: "GEH"}],
         constraintCount: 1,
@@ -63,28 +63,26 @@ function CreateBot(){
     }
 
     function openAction(action){
-        if(action === 'do-your-math'){
-            setComponentState(componentState => ({
-                ...componentState,
-                action: <DoYourMath />
-            }))
-        }else if (action === 'inspect-variables'){
-            setComponentState(componentState => ({
-                ...componentState,
-                action: <InspectVariables />
-            }))
-        }else if (action === "update-signals"){
-            const constraints = <Constraints
-                                        componentState={componentState}
-                                        updateConstraintCount={updateConstraintCount}/>
-
-            setComponentState(componentState => ({
-                ...componentState,
-                action: <Signal constraints={constraints} updateConstraintCount={updateConstraintCount}/>
-            }))
-        }
+        setComponentState(componentState => ({
+            ...componentState,
+            action: action
+        }))   
     }
 
+    function getActionComponent(){
+        const actionName = componentState.action
+        if(actionName == "do-your-math"){
+            return <DoYourMath />
+        }else if(actionName == "inspect-variables"){
+            return <InspectVariables />
+        }else if(actionName == "update-signals"){
+            const constraints = <Constraints
+                                        componentState={componentState}
+                                        updateConstraintCount={updateConstraintCount}/> 
+                                
+            return <Signal constraints={constraints} updateConstraintCount={updateConstraintCount}/>
+        }
+    }
 
     return (
         <div id="create-bot">
@@ -119,7 +117,7 @@ function CreateBot(){
                     </ul>
                 </div>
 
-                {componentState.action}
+                {getActionComponent()}
 
                 <div>
                     <ul className="actions">
