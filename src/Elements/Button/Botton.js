@@ -1,7 +1,7 @@
 import React from "react";
 import "./Button.css"
 
-function Button({btnStyles, btnType="default", text, onBtnClick}){
+function Button({btnStyles, text, onBtnClick, btnType="default"}){
 
     return (
         <button className={btnType}
