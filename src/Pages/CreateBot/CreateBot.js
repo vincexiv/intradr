@@ -123,13 +123,13 @@ function CreateBot(){
                     <ul className="actions">
                         <li className="margin-primary border-primary">
                             <Button
-                                btnStyles={{width: "10rem"}}
+                                btnStyles={{minWidth: "10rem"}}
                                 text="backtest"
                                 onBtnClick={()=>openAction('do-your-math')} />
                         </li>
                         <li className="margin-primary border-primary">
                             <Button
-                                btnStyles={{width: "10rem"}} 
+                                btnStyles={{minWidth: "10rem"}} 
                                 text="start trading"
                                 onBtnClick={()=>openAction('inspect-variables')} />
                         </li>

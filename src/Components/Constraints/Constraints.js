@@ -16,7 +16,8 @@ function Constraints({componentState, updateConstraintCount}){
                                 <SelectOption options={componentState.variables}/>
                                 <SelectOption options={[">", ">=", "<", "<=", "=", "!="]} />
                                 <input className="constraint-input" type="text" />
-                                <Button btnStyles={{padding: "0.2rem 0.4rem 0.2rem 0.4rem",
+                                <Button btnStyles={{padding: "0.45rem",
+                                                    fontSize: "0.9rem",
                                                     color: "white",
                                                     border: "var(--border-primary)",
                                                     backgroundColor: "var(--color-red)"}}

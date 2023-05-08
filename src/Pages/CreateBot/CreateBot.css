@@ -5,7 +5,7 @@
 }
 
 #create-bot #right-side {
-    width: calc(25vw - 4*var(--margin-primary));
+    /* width: calc(25vw - 4*var(--margin-primary)); */
     height: calc(85vh - 2*var(--margin-primary));
     min-height: 20rem;
     background-color: var(--color-primary);
@@ -33,18 +33,18 @@
 
 
 @media only screen and (max-width: 70rem){
+
     #create-bot {
         display: grid;
-        row-gap: 2.3rem;
+        row-gap: 3rem;
         grid-template-areas: 
                 "c c"
-                "a b"
-                ;
+                "a b";
     }
 
     #create-bot #signal,
     #create-bot #do-your-math {
-        width: calc(100vw - 4rem);
+        width: calc(100vw - 3rem);
     }
 
     #create-bot #left-side {
@@ -61,10 +61,34 @@
 
     #create-bot #left-side,
     #create-bot #right-side {
-        width:max-content;
+        justify-content: space-around;
         height: max-content;
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
     }
+
+    #create-bot #signal {
+        margin: auto;
+        width: calc(100% - 1rem);
+    }
+}
+
+@media screen and (max-width: 60rem){
+    #create-bot {
+        grid-template-areas: 
+                "c"
+                "a"
+                "b";
+    }
+
+    #create-bot #right-side #plain-list {
+        width: calc(25vw - 2*var(--margin-primary));
+        min-width: 13rem;
+    }
+
+    #create-bot #right-side {
+        justify-content: left;
+        gap: 0.5rem;
+    }
+    
 }

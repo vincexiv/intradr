@@ -3,7 +3,7 @@
     height: calc(70vh - 2*var(--margin-primary));
     padding: 1rem;
     background-color: var(--color-primary);
-    padding: 3rem;
+    padding: 2rem;
     overflow-y: auto;
 }
 
@@ -22,6 +22,7 @@
 
 #signal #objective-function {
     align-items:flex-start;
+    margin-top: 0.5rem;
 }
 
 #signal .signal-element {
