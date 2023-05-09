@@ -1,10 +1,13 @@
 import React from "react";
 import "./ListItem.css"
 
-function ListItem({text, btnElement}){
+function ListItem({text1, text2, btnElement}){
     return (
         <li id="list-item" className="border-primary margin-primary">
-            <p>{text}</p>
+            <div id="text">
+                <p>{text1}</p>
+                <p>{text2}</p>
+            </div>
             {btnElement}
         </li>
     )

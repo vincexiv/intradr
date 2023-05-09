@@ -5,15 +5,15 @@ import Button from "../../Elements/Button/Botton";
 import ListItem from "../../Elements/ListItem/ListItem";
 
 function ItemList({subject, itemList=[], clickActionName="Track", clickActionFunction}){
-    const theList = itemList?.map(item => {
+    const theList = itemList?.map((item, i) => {
         const btn = <Button 
-                        key={`btn-${item.name}`}
+                        key={`btn-${item.symbol}-${i}`}
                         btnStyles={{padding: "0.2rem 0.5rem 0.2rem 0.5rem", fontSize: "0.8rem", fontWeight: 900}}
                         onBtnClick={()=>clickActionFunction(item)}
                         btnType={subject === "Assets"? "accept": "reject"}
                         text={clickActionName}/>
 
-        return <ListItem key={`list-item-${item.name}`} btnElement={btn} text={item.name}/>
+        return <ListItem key={`list-item-${item.symbol}-${i}`} btnElement={btn} text1={item.longName} text2={item.symbol}/>
     })
 
 

@@ -4,7 +4,7 @@ import ItemList from "../../../Components/ItemList/ItemList";
 
 function LeftSide({componentState, setComponentState}){
     function startTracking(trackedAsset){
-        const updatedUntrackedAssets = componentState.untrackedAssets.filter(asset => asset.name !== trackedAsset.name)
+        const updatedUntrackedAssets = componentState.untrackedAssets.filter(asset => asset.symbol !== trackedAsset.symbol)
         const updatedTrackedAssets = [...componentState.trackedAssets, trackedAsset]
 
         setComponentState(componentState => ({
@@ -15,7 +15,7 @@ function LeftSide({componentState, setComponentState}){
     }
 
     function stopTracking(untrackedAsset){
-        const updatedTrackedAssets = componentState.trackedAssets.filter(asset => asset.name !== untrackedAsset.name)
+        const updatedTrackedAssets = componentState.trackedAssets.filter(asset => asset.symbol !== untrackedAsset.symbol)
         const updatedUntrackedAssets = [...componentState.untrackedAssets, untrackedAsset]
 
         setComponentState(componentState => ({

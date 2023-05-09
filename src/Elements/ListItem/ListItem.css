@@ -8,3 +8,9 @@
     background-color: var(--color-gold);
     padding: 0.15rem 0.3rem 0.15rem 0.6rem;
 }
+
+#list-item #text {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
