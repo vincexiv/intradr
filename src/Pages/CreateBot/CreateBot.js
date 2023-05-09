@@ -8,11 +8,12 @@ import LeftSide from "./LeftSideComponent/LeftSide";
 import RightSide from "./RightSideComponent/RightSide";
 import MiddleSide from "./MiddleSideComponent/MiddleSide";
 import { apiHost } from "../../variables";
+import { availableAssets } from "./CreateBotVariables";
 
 function CreateBot({market = "US", index="N/A", limit=10}){
     const [componentState, setComponentState] = useState({
         action: "do-your-math",
-        untrackedAssets: [],
+        untrackedAssets: availableAssets,
         trackedAssets: [],
         constraintCount: 1,
         variables: ["AAPL_return"],
@@ -29,7 +30,7 @@ function CreateBot({market = "US", index="N/A", limit=10}){
             }).then(res => {
                 if(res.ok){
                     res.json().then(data => {
-                        console.log(data)
+                        console.log(JSON.stringify(data))
                         setComponentState(componentState => (
                             {...componentState, untrackedAssets: data}
                         ))
