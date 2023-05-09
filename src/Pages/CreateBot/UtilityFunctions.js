@@ -1,4 +1,4 @@
-function getUntrackedAssets(fullAssetList, trackedAssets, number=10){
+function getUntrackedAssets(fullAssetList, trackedAssets, number=5){
     trackedAssets = trackedAssets || []
     fullAssetList = fullAssetList || []
 

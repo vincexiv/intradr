@@ -1,9 +1,9 @@
 #item-list {
     width: calc(25vw - 2*var(--margin-primary));
-    max-height: calc(50vh - 2*var(--margin-primary));
     min-width: 15rem;
     min-height: 20rem;
     background-color: var(--color-primary);
+    padding-bottom: 1rem;
 }
 
 #item-list h2 {
@@ -15,7 +15,10 @@
 #item-list #the-list {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    overflow-y: auto;
+    max-height: 25vh;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 #item-list #empty-list-message {

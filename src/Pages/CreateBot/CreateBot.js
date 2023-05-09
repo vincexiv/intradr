@@ -12,10 +12,11 @@ import { availableAssets } from "./UtilityVariables";
 import { getUntrackedAssets } from "./UtilityFunctions";
 
 function CreateBot({market = "US", index="N/A", limit=100}){
+    console.log("available assets length: ", availableAssets.length)
     const [componentState, setComponentState] = useState({
         action: "do-your-math",
         fullAssetList: availableAssets,
-        untrackedAssets: availableAssets,
+        untrackedAssets: getUntrackedAssets(availableAssets, []),
         trackedAssets: [],
         constraintCount: 1,
         variables: ["AAPL_return"],
@@ -36,9 +37,10 @@ function CreateBot({market = "US", index="N/A", limit=100}){
                             {
                                 ...componentState,
                                 fullAssetList: data,
-                                untrackedAssets: getUntrackedAssets(data, componentState?.trackedAssets, 10)
+                                untrackedAssets: getUntrackedAssets(data, componentState?.trackedAssets)
                             }
                         ))
+                        console.log("what: ", JSON.stringify(data.slice(0, 100)))
                     })
                 }else {
                     res.json().then(err => {

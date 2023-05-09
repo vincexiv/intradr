@@ -3,7 +3,6 @@
     display: flex;
     justify-content: center;
     padding: var(--val) var(--val) 0 var(--val);
-    margin-bottom: 2rem;
 }
 
 #create-bot .create-bot-main-area {
