@@ -57,7 +57,7 @@ function CreateBot({market = "US", index="N/A", limit=100}){
                 setComponentState(componentState => {
                     return {
                         ...componentState,
-                        constraintCount: componentState.constraintCount + 1
+                        constraintCount: componentState.constraintCount - 1
                     }
                 })
             }
