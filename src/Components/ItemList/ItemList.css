@@ -17,3 +17,9 @@
     flex-direction: column;
     justify-content: center;
 }
+
+#item-list #empty-list-message {
+    font-weight: 900;
+    text-justify: center;
+    margin: var(--margin-primary);
+}

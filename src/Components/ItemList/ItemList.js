@@ -4,7 +4,7 @@ import Search from "../../Elements/Search/Search";
 import Button from "../../Elements/Button/Botton";
 import ListItem from "../../Elements/ListItem/ListItem";
 
-function ItemList({subject, itemList=[], clickActionName="Track", clickActionFunction}){
+function ItemList({subject, itemList=[], clickActionName="Track", clickActionFunction, emptyListMessage="loading"}){
     const theList = itemList?.map((item, i) => {
         const btn = <Button 
                         key={`btn-${item.symbol}-${i}`}
@@ -23,7 +23,9 @@ function ItemList({subject, itemList=[], clickActionName="Track", clickActionFun
             <Search />
 
             <ul id="the-list" className="margin-primary">
-                {theList}
+                {
+                    !itemList.length? <p id="empty-list-message">{emptyListMessage}</p> : theList
+                }
             </ul>
         </div>
     )

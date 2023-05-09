@@ -31,12 +31,14 @@ function LeftSide({componentState, setComponentState}){
                     subject="Assets"
                     clickActionName="Track"
                     itemList={componentState?.untrackedAssets}
-                    clickActionFunction={startTracking}/>
+                    clickActionFunction={startTracking}
+                    emptyListMessage=""/>
             <ItemList
                     subject="Tracking"
                     clickActionName="Untrack"
                     itemList={componentState?.trackedAssets}
-                    clickActionFunction={stopTracking}/>
+                    clickActionFunction={stopTracking}
+                    emptyListMessage="You aren't tracking any assets yet. Click 'track' on the available assets to add it to this list"/>
         </div>
     )
 }
