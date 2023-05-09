@@ -9,6 +9,7 @@ import RightSide from "./RightSideComponent/RightSide";
 import MiddleSide from "./MiddleSideComponent/MiddleSide";
 import { apiHost } from "../../variables";
 import { availableAssets } from "./UtilityVariables";
+import { getUntrackedAssets } from "./UtilityFunctions";
 
 function CreateBot({market = "US", index="N/A", limit=100}){
     const [componentState, setComponentState] = useState({
@@ -22,29 +23,6 @@ function CreateBot({market = "US", index="N/A", limit=100}){
         market: market,
         index: index
     })
-
-    function getUntrackedAssets(fullAssetList, trackedAssets, number=10){
-        trackedAssets = trackedAssets || []
-        fullAssetList = fullAssetList || []
-
-        const untrackedAssets = []
-        for(let i = 0; i < fullAssetList?.length; i++){
-            const asset = trackedAssets.find(tracked => {
-                return fullAssetList[i].symbol === tracked.symbol
-            })
-
-            if(asset === undefined){
-                console.log(asset)
-                untrackedAssets.push(fullAssetList[i])
-            }
-            
-            if(untrackedAssets.length > number){
-                break
-            }
-        }
-
-        return untrackedAssets   
-    }
 
     useEffect(()=>{
         if(setComponentState){
@@ -108,8 +86,11 @@ function CreateBot({market = "US", index="N/A", limit=100}){
 
     return (
         <div id="create-bot">
-            <LeftSide componentState={componentState} setComponentState={setComponentState} /> 
-            <MiddleSide componentState={componentState} setComponentState={setComponentState} getActionComponent={getActionComponent}/>           
+            <LeftSide componentState={componentState}
+                      setComponentState={setComponentState} /> 
+            <MiddleSide componentState={componentState}
+                        setComponentState={setComponentState}
+                        getActionComponent={getActionComponent}/>           
             <RightSide componentState={componentState}/>
         </div>
     )

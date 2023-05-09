@@ -1,26 +1,27 @@
 import React from "react";
 import "./LeftSide.css"
 import ItemList from "../../../Components/ItemList/ItemList";
+import { getUntrackedAssets } from "../UtilityFunctions";
 
 function LeftSide({componentState, setComponentState}){
     function startTracking(trackedAsset){
-        const updatedUntrackedAssets = componentState.untrackedAssets.filter(asset => asset.symbol !== trackedAsset.symbol)
         const updatedTrackedAssets = [...componentState.trackedAssets, trackedAsset]
+        const fullAssetList = componentState.fullAssetList
 
         setComponentState(componentState => ({
             ...componentState,
-            untrackedAssets: updatedUntrackedAssets,
+            untrackedAssets: getUntrackedAssets(fullAssetList, updatedTrackedAssets),
             trackedAssets: updatedTrackedAssets
         }))
     }
 
     function stopTracking(untrackedAsset){
         const updatedTrackedAssets = componentState.trackedAssets.filter(asset => asset.symbol !== untrackedAsset.symbol)
-        const updatedUntrackedAssets = [...componentState.untrackedAssets, untrackedAsset]
+        const fullAssetList = componentState.fullAssetList
 
         setComponentState(componentState => ({
             ...componentState,
-            untrackedAssets: updatedUntrackedAssets,
+            untrackedAssets: getUntrackedAssets(fullAssetList, updatedTrackedAssets),
             trackedAssets: updatedTrackedAssets
         }))
     }
