@@ -10,9 +10,10 @@ import MiddleSide from "./MiddleSideComponent/MiddleSide";
 import { apiHost } from "../../variables";
 import { availableAssets } from "./UtilityVariables";
 
-function CreateBot({market = "US", index="N/A", limit=10}){
+function CreateBot({market = "US", index="N/A", limit=100}){
     const [componentState, setComponentState] = useState({
         action: "do-your-math",
+        fullAssetList: availableAssets,
         untrackedAssets: availableAssets,
         trackedAssets: [],
         constraintCount: 1,
@@ -22,6 +23,29 @@ function CreateBot({market = "US", index="N/A", limit=10}){
         index: index
     })
 
+    function getUntrackedAssets(fullAssetList, trackedAssets, number=10){
+        trackedAssets = trackedAssets || []
+        fullAssetList = fullAssetList || []
+
+        const untrackedAssets = []
+        for(let i = 0; i < fullAssetList?.length; i++){
+            const asset = trackedAssets.find(tracked => {
+                return fullAssetList[i].symbol === tracked.symbol
+            })
+
+            if(asset === undefined){
+                console.log(asset)
+                untrackedAssets.push(fullAssetList[i])
+            }
+            
+            if(untrackedAssets.length > number){
+                break
+            }
+        }
+
+        return untrackedAssets   
+    }
+
     useEffect(()=>{
         if(setComponentState){
             fetch(`${apiHost}/assets?market=${market}&index=${index}&limit=${limit}`, {
@@ -30,9 +54,12 @@ function CreateBot({market = "US", index="N/A", limit=10}){
             }).then(res => {
                 if(res.ok){
                     res.json().then(data => {
-                        console.log(JSON.stringify(data))
                         setComponentState(componentState => (
-                            {...componentState, untrackedAssets: data}
+                            {
+                                ...componentState,
+                                fullAssetList: data,
+                                untrackedAssets: getUntrackedAssets(data, componentState?.trackedAssets, 10)
+                            }
                         ))
                     })
                 }else {
@@ -41,7 +68,7 @@ function CreateBot({market = "US", index="N/A", limit=10}){
                     })
                 }
             })
-        }
+        }        
     }, [])
 
     function updateConstraintCount(action){
