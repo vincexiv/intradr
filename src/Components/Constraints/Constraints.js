@@ -12,7 +12,7 @@ function Constraints({componentState, updateConstraintCount}){
                     return (
                         <div key={index} className="constraint-item">
                             <div className="signal-element">
-                                <SelectOption options={componentState.variables}/>
+                                <input className="constraint-input" type="text" />
                                 <SelectOption options={[">", ">=", "<", "<=", "=", "!="]} />
                                 <input className="constraint-input" type="text" />
                                 <Button btnStyles={{padding: "0.45rem",
