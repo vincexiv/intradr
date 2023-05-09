@@ -84,7 +84,7 @@ function CreateBot(){
 
     return (
         <div id="create-bot">
-            <div id="left-side">
+            <div id="left-side" className="side">
                 <ItemList
                         subject="Assets"
                         clickActionName="Track"
@@ -136,7 +136,7 @@ function CreateBot(){
                 
             </div>
 
-            <div id="right-side" className="border-primary margin-primary">
+            <div id="right-side" className="border-primary margin-primary side">
                 <PlainList componentState={componentState} variable="variables" title="Variables"/>
                 <PlainList componentState={componentState} variable="bots" title="Bots"/>
             </div>

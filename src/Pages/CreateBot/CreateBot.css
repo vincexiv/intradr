@@ -1,11 +1,19 @@
 #create-bot {
-    --val: calc(2*var(--margin-primary));
+    --val: calc(4*var(--margin-primary));
     display: flex;
+    justify-content: center;
     padding: var(--val) var(--val) 0 var(--val);
 }
 
+#create-bot .create-bot-main-area {
+    width: calc(50vw - 2*var(--margin-primary));
+    height: calc(70vh - 2*var(--margin-primary));
+    padding: 1rem;
+    background-color: var(--color-primary);
+    overflow-y: auto;
+}
+
 #create-bot #right-side {
-    /* width: calc(25vw - 4*var(--margin-primary)); */
     height: calc(85vh - 2*var(--margin-primary));
     min-height: 20rem;
     background-color: var(--color-primary);
@@ -42,9 +50,13 @@
                 "a b";
     }
 
-    #create-bot #signal,
-    #create-bot #do-your-math {
-        width: calc(100vw - 3rem);
+    #create-bot #left-side,
+    #create-bot #right-side {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        min-height: 20rem;
+        height: max-content;
     }
 
     #create-bot #left-side {
@@ -59,16 +71,9 @@
         grid-area: c;
     }
 
-    #create-bot #left-side,
-    #create-bot #right-side {
+    #create-bot .create-bot-main-area {
         justify-content: space-around;
-        height: max-content;
-        display: flex;
-        flex-direction: row;
-    }
-
-    #create-bot #signal {
-        margin: auto;
+        min-height: max-content;
         width: calc(100% - 1rem);
     }
 }
@@ -81,14 +86,25 @@
                 "b";
     }
 
-    #create-bot #right-side #plain-list {
-        width: calc(25vw - 2*var(--margin-primary));
-        min-width: 13rem;
+    #create-bot .create-bot-main-area {
+        width: calc(100% - 2rem);
     }
 
+    #create-bot #left-side,
     #create-bot #right-side {
-        justify-content: left;
-        gap: 0.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        min-height: 20rem;
+        width: calc(100% - 2rem);
+        height: max-content;
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin: 0;
     }
-    
+
+    #create-bot #item-list,
+    #create-bot #plain-list {
+        width: 30rem;
+    }    
 }

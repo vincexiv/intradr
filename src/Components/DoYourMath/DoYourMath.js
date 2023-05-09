@@ -9,7 +9,7 @@ function DoYourMath(){
     }
 
     return (
-        <textarea id="do-your-math" className="border-primary margin-primary" value={strategy} onChange={updateStrategy}>
+        <textarea id="do-your-math" className="border-primary margin-primary create-bot-main-area" value={strategy} onChange={updateStrategy}>
         </textarea>
     )
 }

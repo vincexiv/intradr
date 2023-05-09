@@ -1,12 +1,3 @@
-#signal {
-    width: calc(50vw - 2*var(--margin-primary));
-    height: calc(70vh - 2*var(--margin-primary));
-    padding: 1rem;
-    background-color: var(--color-primary);
-    padding: 2rem;
-    overflow-y: auto;
-}
-
 #signal .signal-element-title {
     font-size: 1.1rem;
     padding: 0.5rem 0 0.5rem 0;

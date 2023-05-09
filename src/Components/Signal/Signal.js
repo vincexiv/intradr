@@ -10,7 +10,7 @@ function Signal({constraints, updateConstraintCount, variables = ["Portfolio_ret
     }
 
     return (
-        <div id="signal" className="border-primary margin-primary">
+        <div id="signal" className="border-primary margin-primary create-bot-main-area">
             <form onSubmit={handleSubmit}>
   
                 <div>
