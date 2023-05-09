@@ -2,11 +2,11 @@ import React, {useState} from "react";
 import "./CreateBot.css"
 import DoYourMath from "../../Components/DoYourMath/DoYourMath";
 import InspectVariables from "../../Components/InspectVariables/InspectVariables";
-import ItemList from "../../Components/ItemList/ItemList";
-import Button from "../../Elements/Button/Botton";
 import Signal from "../../Components/Signal/Signal";
 import Constraints from "../../Components/Constraints/Constraints";
-import PlainList from "../../Components/PlainList/PlainList";
+import LeftSide from "./LeftSideComponent/LeftSide";
+import RightSide from "./RightSideComponent/RightSide";
+import MiddleSide from "./MiddleSideComponent/MiddleSide";
 
 function CreateBot(){
     const [componentState, setComponentState] = useState({
@@ -17,28 +17,6 @@ function CreateBot(){
         variables: ["AAPL_return"],
         bots: ["xiv_bot"]
     })
-
-    function startTracking(trackedAsset){
-        const updatedUntrackedAssets = componentState.untrackedAssets.filter(asset => asset.name !== trackedAsset.name)
-        const updatedTrackedAssets = [...componentState.trackedAssets, trackedAsset]
-
-        setComponentState(componentState => ({
-            ...componentState,
-            untrackedAssets: updatedUntrackedAssets,
-            trackedAssets: updatedTrackedAssets
-        }))
-    }
-
-    function stopTracking(untrackedAsset){
-        const updatedTrackedAssets = componentState.trackedAssets.filter(asset => asset.name !== untrackedAsset.name)
-        const updatedUntrackedAssets = [...componentState.untrackedAssets, untrackedAsset]
-
-        setComponentState(componentState => ({
-            ...componentState,
-            untrackedAssets: updatedUntrackedAssets,
-            trackedAssets: updatedTrackedAssets
-        }))
-    }
 
     function updateConstraintCount(action){
         if(action === "reduce"){
@@ -60,13 +38,6 @@ function CreateBot(){
         }        
     }
 
-    function openAction(action){
-        setComponentState(componentState => ({
-            ...componentState,
-            action: action
-        }))   
-    }
-
     function getActionComponent(){
         const actionName = componentState.action
         if(actionName === "do-your-math"){
@@ -84,62 +55,9 @@ function CreateBot(){
 
     return (
         <div id="create-bot">
-            <div id="left-side" className="side">
-                <ItemList
-                        subject="Assets"
-                        clickActionName="Track"
-                        itemList={componentState?.untrackedAssets}
-                        clickActionFunction={startTracking}/>
-                <ItemList
-                        subject="Tracking"
-                        clickActionName="Untrack"
-                        itemList={componentState?.trackedAssets}
-                        clickActionFunction={stopTracking}/>
-            </div>
-
-            <div id="middle-side">
-                <div>
-                    <ul className="actions">
-                        <li className="margin-primary border-primary">
-                            <Button
-                                btnStyles={{minWidth: "10rem"}}
-                                text="build strategy"
-                                onBtnClick={()=>openAction('do-your-math')} />
-                        </li>
-                        <li className="margin-primary border-primary">
-                            <Button
-                                btnStyles={{minWidth: "10rem"}} 
-                                text="add signals"
-                                onBtnClick={()=>openAction('update-signals')} />
-                        </li>
-                    </ul>
-                </div>
-
-                {getActionComponent()}
-
-                <div>
-                    <ul className="actions">
-                        <li className="margin-primary border-primary">
-                            <Button
-                                btnStyles={{minWidth: "10rem"}}
-                                text="backtest"
-                                onBtnClick={()=>openAction('do-your-math')} />
-                        </li>
-                        <li className="margin-primary border-primary">
-                            <Button
-                                btnStyles={{minWidth: "10rem"}} 
-                                text="start trading"
-                                onBtnClick={()=>openAction('inspect-variables')} />
-                        </li>
-                    </ul>
-                </div>
-                
-            </div>
-
-            <div id="right-side" className="border-primary margin-primary side">
-                <PlainList componentState={componentState} variable="variables" title="Variables"/>
-                <PlainList componentState={componentState} variable="bots" title="Bots"/>
-            </div>
+            <LeftSide componentState={componentState} setComponentState={setComponentState} /> 
+            <MiddleSide componentState={componentState} setComponentState={setComponentState} getActionComponent={getActionComponent}/>           
+            <RightSide componentState={componentState}/>
         </div>
     )
 }
