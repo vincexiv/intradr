@@ -8,7 +8,7 @@ import LeftSide from "./LeftSideComponent/LeftSide";
 import RightSide from "./RightSideComponent/RightSide";
 import MiddleSide from "./MiddleSideComponent/MiddleSide";
 import { apiHost } from "../../variables";
-import { availableAssets } from "./CreateBotVariables";
+import { availableAssets } from "./UtilityVariables";
 
 function CreateBot({market = "US", index="N/A", limit=10}){
     const [componentState, setComponentState] = useState({
