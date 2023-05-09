@@ -86,6 +86,10 @@
                 "b";
     }
 
+    #create-bot #middle-side, #create-bot #signal {
+        height: max-content;
+    }
+
     #create-bot .create-bot-main-area {
         width: calc(100% - 2rem);
     }
