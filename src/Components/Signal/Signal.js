@@ -2,6 +2,7 @@ import React from "react";
 import "./Signal.css";
 import SelectOption from "../../Elements/SelectOption/SelectOption";
 import Button from "../../Elements/Button/Botton";
+import StartTradingBtn from "./StartTradingBtn/StartTradingBtn";
 
 
 function Signal({constraints, updateConstraintCount, variables = ["Portfolio_return"]}){
@@ -35,11 +36,9 @@ function Signal({constraints, updateConstraintCount, variables = ["Portfolio_ret
                                     onBtnClick={(e) => updateConstraintCount("increase")}/>
                         </div>
                     </div>
-                    <Button btnStyles={{marginTop: "2.5rem",
-                                        backgroundColor: "var(--color-background)",
-                                        border: "var(--border-primary)"}}
-                            text="Run Bot"
-                            onBtnClick={handleSubmit} />
+
+                    <StartTradingBtn onBtnClick={handleSubmit}/>
+
                 </div>
             </form>
         </div>
