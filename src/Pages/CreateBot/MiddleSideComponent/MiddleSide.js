@@ -23,7 +23,7 @@ function MiddleSide({componentState, setComponentState, getActionComponent}){
                     <li className="margin-primary border-primary">
                         <Button
                             btnStyles={{minWidth: "10rem"}} 
-                            text="add signals"
+                            text="set signals"
                             onBtnClick={()=>openAction('update-signals')} />
                     </li>
                 </ul>
