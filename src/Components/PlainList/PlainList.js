@@ -8,7 +8,9 @@ function PlainList({componentState, variable, title}){
             <ul>
                 {
                     componentState[variable].map(variable => {
-                        return <li key={variable}>{variable}</li>
+                        return <li key={variable.name}>
+                            <p><span>{variable.name}</span><span>{variable.value}</span></p>
+                        </li>
                     })
                 }
             </ul>
