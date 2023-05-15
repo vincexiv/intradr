@@ -13,3 +13,9 @@
 #plain-list ul li {
     list-style: none;
 }
+
+#plain-list .item-name-and-value {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}

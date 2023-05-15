@@ -19,7 +19,7 @@ function CreateBot({market = "US", index="N/A", limit=100}){
         untrackedAssets: getUntrackedAssets(availableAssets, []),
         trackedAssets: [],
         constraintCount: 1,
-        variables: [{name: "AAPL_return", value: 10}],
+        variables: [{name: "AAPL_return", value: 0.053773}],
         bots: [{name: "xiv_bot", value: ""}],
         market: market,
         index: index,

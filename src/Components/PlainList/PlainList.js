@@ -9,7 +9,10 @@ function PlainList({componentState, variable, title}){
                 {
                     componentState[variable].map(variable => {
                         return <li key={variable.name}>
-                            <p><span>{variable.name}</span><span>{variable.value}</span></p>
+                            <p className="item-name-and-value">
+                                <span>{variable.name}</span>
+                                <span>{variable.value}</span>
+                            </p>
                         </li>
                     })
                 }
