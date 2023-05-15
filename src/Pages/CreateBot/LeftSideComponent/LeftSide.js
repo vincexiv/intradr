@@ -11,7 +11,8 @@ function LeftSide({componentState, setComponentState}){
         setComponentState(componentState => ({
             ...componentState,
             untrackedAssets: getUntrackedAssets(fullAssetList, updatedTrackedAssets),
-            trackedAssets: updatedTrackedAssets
+            trackedAssets: updatedTrackedAssets,
+            portfolioSize: componentState.portfolioSize + 1
         }))
     }
 
@@ -22,7 +23,8 @@ function LeftSide({componentState, setComponentState}){
         setComponentState(componentState => ({
             ...componentState,
             untrackedAssets: getUntrackedAssets(fullAssetList, updatedTrackedAssets),
-            trackedAssets: updatedTrackedAssets
+            trackedAssets: updatedTrackedAssets,
+            portfolioSize: componentState.portfolioSize - 1
         }))
     }
 

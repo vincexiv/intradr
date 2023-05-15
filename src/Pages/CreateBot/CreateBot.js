@@ -19,10 +19,11 @@ function CreateBot({market = "US", index="N/A", limit=100}){
         untrackedAssets: getUntrackedAssets(availableAssets, []),
         trackedAssets: [],
         constraintCount: 1,
-        variables: ["AAPL_return"],
-        bots: ["xiv_bot"],
+        variables: [{name: "AAPL_return", value: 10}],
+        bots: [{name: "xiv_bot", value: ""}],
         market: market,
-        index: index
+        index: index,
+        portfolioSize: 0
     })
 
     useEffect(()=>{
