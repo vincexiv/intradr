@@ -2,7 +2,7 @@ import React from "react";
 import "./MiddleSide.css"
 import Button from "../../../Elements/Button/Botton";
 
-function MiddleSide({componentState, setComponentState, getActionComponent}){
+function MiddleSide({setComponentState, getActionComponent}){
     function openAction(action){
         setComponentState(componentState => ({
             ...componentState,

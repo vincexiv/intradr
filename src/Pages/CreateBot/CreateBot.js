@@ -12,7 +12,6 @@ import { availableAssets } from "./UtilityVariables";
 import { getUntrackedAssets } from "./UtilityFunctions";
 
 function CreateBot({market = "US", index="N/A", limit=100}){
-    console.log("available assets length: ", availableAssets.length)
     const [componentState, setComponentState] = useState({
         action: "do-your-math",
         fullAssetList: availableAssets,
@@ -23,7 +22,8 @@ function CreateBot({market = "US", index="N/A", limit=100}){
         bots: [{name: "xiv_bot", value: ""}],
         market: market,
         index: index,
-        portfolioSize: 0
+        portfolioSize: 0,
+        strategy: `You can write your strategy here.`
     })
 
     useEffect(()=>{
@@ -75,7 +75,7 @@ function CreateBot({market = "US", index="N/A", limit=100}){
     function getActionComponent(){
         const actionName = componentState.action
         if(actionName === "do-your-math"){
-            return <DoYourMath />
+            return <DoYourMath componentState={componentState} setComponentState={setComponentState} />
         }else if(actionName === "inspect-variables"){
             return <InspectVariables />
         }else if(actionName === "update-signals"){
