@@ -1,5 +1,6 @@
 import React from "react";
 import "./DoYourMath.css"
+import { apiHost } from "../../variables";
 
 function DoYourMath({componentState, setComponentState}){
 
@@ -12,12 +13,50 @@ function DoYourMath({componentState, setComponentState}){
         ))
     }
 
-    function evaluateExpression(e){
-        let expressionArray = []
+    function getUpdatedVariables(existingVariables, newVariables){
+        // Keep only existing variables that are not in new variables
+        existingVariables = existingVariables.filter(existingVar => {
+            return !newVariables.find(newVar => existingVar.name == newVar.name)
+        })
+
+        return [...existingVariables, ...newVariables]
+    }
+
+    function evaluateExpressions(expressionArray, assets ){
+        fetch(`${apiHost}/evaluate`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify({
+                expression_array: expressionArray,
+                assets: assets
+            })
+        }).then(res => {
+            if(res.ok){
+                res.json().then(data => {
+                    setComponentState(componentState => (
+                        {
+                            ...componentState,
+                            variables: getUpdatedVariables(componentState.variables, data.results)
+                        }
+                    ))
+                })
+            }else {
+                res.json().then(error => {
+                    console.warn(error)
+                })
+            }
+        })
+    }
+
+    function handleKeyUp(e){
         if(e.key == "Enter"){
-            expressionArray = e.target.value.split("\n")
+            let expressionArray = e.target.value.split("\n")
             expressionArray = expressionArray.filter(stg => stg.length != 0)
-            console.log(expressionArray)
+
+            evaluateExpressions(expressionArray, componentState.trackedAssets?.map(ta => ta.symbol))
         }
         // console.log(e.code)
     }
@@ -27,7 +66,7 @@ function DoYourMath({componentState, setComponentState}){
                   className="border-primary margin-primary create-bot-main-area"
                   value={componentState.strategy}
                   onChange={updateStrategy}
-                  onKeyUp={evaluateExpression}>
+                  onKeyUp={handleKeyUp}>
         </textarea>
     )
 }
