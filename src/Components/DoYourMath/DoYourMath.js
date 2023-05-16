@@ -15,11 +15,13 @@ function DoYourMath({componentState, setComponentState}){
 
     function getUpdatedVariables(existingVariables, newVariables){
         // Keep only existing variables that are not in new variables
-        existingVariables = existingVariables.filter(existingVar => {
-            return !newVariables.find(newVar => existingVar.name == newVar.name)
-        })
+        // existingVariables = existingVariables.filter(existingVar => {
+        //     return !newVariables.find(newVar => existingVar.name == newVar.name)
+        // })
 
-        return [...existingVariables, ...newVariables]
+        // return [...existingVariables, ...newVariables]
+        console.log(newVariables)
+        return newVariables
     }
 
     function evaluateExpressions(expressionArray, assets ){
