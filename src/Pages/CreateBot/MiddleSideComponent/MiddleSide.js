@@ -23,30 +23,25 @@ function MiddleSide({setComponentState, getActionComponent}){
                     <li className="margin-primary border-primary">
                         <Button
                             btnStyles={{minWidth: "10rem"}} 
-                            text="set signals"
-                            onBtnClick={()=>openAction('update-signals')} />
+                            text="inspect variables"
+                            onBtnClick={()=>openAction('inspect-variables')} />
+                    </li>
+                    <li className="margin-primary border-primary">
+                        <Button
+                            btnStyles={{minWidth: "10rem"}}
+                            text="backtest"
+                            onBtnClick={()=>openAction('backtest')} />
+                    </li>
+                    <li className="margin-primary border-primary">
+                        <Button
+                            btnStyles={{minWidth: "10rem"}} 
+                            text="set configurations"
+                            onBtnClick={()=>openAction('set-configurations')} />
                     </li>
                 </ul>
             </div>
 
             {getActionComponent()}
-
-            <div>
-                <ul className="actions">
-                    <li className="margin-primary border-primary">
-                        <Button
-                            btnStyles={{minWidth: "10rem"}}
-                            text="backtest"
-                            onBtnClick={()=>openAction('do-your-math')} />
-                    </li>
-                    <li className="margin-primary border-primary">
-                        <Button
-                            btnStyles={{minWidth: "10rem"}} 
-                            text="start trading"
-                            onBtnClick={()=>openAction('inspect-variables')} />
-                    </li>
-                </ul>
-            </div>
         </div>
     )
 }

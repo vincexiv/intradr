@@ -10,6 +10,7 @@ import MiddleSide from "./MiddleSideComponent/MiddleSide";
 import { apiHost } from "../../variables";
 import { availableAssets } from "./UtilityVariables";
 import { getUntrackedAssets } from "./UtilityFunctions";
+import Backtest from "../../Components/Backtest/Backtest";
 
 function CreateBot({market = "US", index="N/A", limit=100}){
     const [componentState, setComponentState] = useState({
@@ -78,7 +79,9 @@ function CreateBot({market = "US", index="N/A", limit=100}){
             return <DoYourMath componentState={componentState} setComponentState={setComponentState} />
         }else if(actionName === "inspect-variables"){
             return <InspectVariables />
-        }else if(actionName === "update-signals"){
+        }else if(actionName === "backtest"){
+            return <Backtest />
+        }else if(actionName === "set-configurations"){
             const constraints = <Constraints
                                         componentState={componentState}
                                         updateConstraintCount={updateConstraintCount}/> 
