@@ -25,7 +25,18 @@ function CreateBot({market = "US", index="N/A", limit=100}){
         index: index,
         portfolioSize: 0,
         strategy: `You can write your strategy here.`,
-        expressionArray: []
+        expressionArray: [],
+        figureDetails: {
+            backdate_period: 30,
+            graph_type: "line",
+            xvals: [],
+            figureData: [{
+                yvals: [],
+                title: "",
+                lineGraphStyle: {}
+            }],
+            plotVariables: []
+        }
     })
 
     useEffect(()=>{
@@ -78,7 +89,7 @@ function CreateBot({market = "US", index="N/A", limit=100}){
         if(actionName === "do-your-math"){
             return <DoYourMath componentState={componentState} setComponentState={setComponentState} />
         }else if(actionName === "inspect-variables"){
-            return <InspectVariables componentState={componentState} />
+            return <InspectVariables componentState={componentState} setComponentState={setComponentState} />
         }else if(actionName === "backtest"){
             return <Backtest />
         }else if(actionName === "set-configurations"){

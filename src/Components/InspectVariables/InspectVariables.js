@@ -1,21 +1,9 @@
 import React, {useState, useEffect} from "react";
 import "./InspectVariables.css"
 import { apiHost } from "../../variables";
-import Button from "../../Elements/Button/Botton";
 import LineGraph from "../../Charts/LineGraph/LineGraph";
 
-function InspectVariables({componentState}){
-    const [figureDetails, setFigureDetails] = useState({
-        backdate_period: 30,
-        graph_type: "line",
-        xvals: [],
-        figureData: [{
-            yvals: [],
-            title: "",
-            lineGraphStyle: {}
-        }],
-        plotVariables: []
-    })
+function InspectVariables({componentState, setComponentState}){
 
     useEffect(()=>{
         fetch(`${apiHost}/graph_data`, {
@@ -27,19 +15,20 @@ function InspectVariables({componentState}){
             body: JSON.stringify({
                 expression_array: componentState.expressionArray,
                 assets: componentState.trackedAssets?.map(ta => ta.symbol),
-                backdate_period: figureDetails.backdate_period,
+                backdate_period: componentState.figureDetails.backdate_period,
             })
         }).then(res => {
             if(res.ok){
-                res.json().then(data => {   
-                    setFigureDetails(figureDetails => {
-                        return (
-                            {
-                                ...figureDetails,
+                res.json().then(data => {  
+                    setComponentState(componentState => {
+                        return {
+                            ...componentState,
+                            figureDetails: {
+                                ...componentState.figureDetails,
                                 xvals: getXvals(data),
-                                figureData: getFigureData(data),
-                            }
-                        )
+                                figureData: getFigureData(data)
+                            } 
+                        }
                     })
                 })
             }else{
@@ -71,7 +60,7 @@ function InspectVariables({componentState}){
     return (
         <div id="inspect-variables" className="border-primary margin-primary create-bot-main-area">
             <div id="inspect-variables-figure">
-                <LineGraph figureDetails={figureDetails}/>
+                <LineGraph componentState={componentState}/>
             </div>
             <div>
                 <ul id="variables">
