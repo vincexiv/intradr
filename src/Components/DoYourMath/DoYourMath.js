@@ -41,6 +41,7 @@ function DoYourMath({componentState, setComponentState}){
                     setComponentState(componentState => (
                         {
                             ...componentState,
+                            expressionArray: expressionArray,
                             variables: getUpdatedVariables(componentState.variables, data.results)
                         }
                     ))
