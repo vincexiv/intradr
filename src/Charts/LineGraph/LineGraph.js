@@ -1,7 +1,7 @@
 import React from "react";
 import Chart from "chart.js/auto";
 import { Line } from "react-chartjs-2";
-
+import "./LineGraph.css"
 function LineGraph({componentState}){
   const figureDetails = componentState.figureDetails
   
@@ -21,8 +21,8 @@ function LineGraph({componentState}){
     };
 
   return (
-    <div>
-        <Line data={data} />
+    <div id="line-graph">
+        <Line data={data}  options={{ maintainAspectRatio: false, responsive: true }}/>
     </div>
   );
 };

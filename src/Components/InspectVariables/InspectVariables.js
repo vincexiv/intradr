@@ -35,7 +35,7 @@ function InspectVariables({componentState, setComponentState}){
                 res.json().then(error => console.warn(error))
             }
         })
-    }, [componentState])
+    }, [])
 
     function getXvals(data){
         for(let variableName in data.graph_data){

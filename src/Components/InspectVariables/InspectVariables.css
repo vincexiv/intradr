@@ -1,8 +1,13 @@
 #inspect-variables {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
     justify-content: space-around;
+}
+
+#inspect-variables #variables {
+    display: flex;
+    gap: 1rem;
 }
 
 #inspect-variables ul li {
@@ -17,5 +22,6 @@
     font-size: 1rem;
     display: flex;
     justify-content: center;
+    align-items: center;
     cursor: pointer;
 }
