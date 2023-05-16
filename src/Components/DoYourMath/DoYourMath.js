@@ -55,9 +55,9 @@ function DoYourMath({componentState, setComponentState}){
     }
 
     function handleKeyUp(e){
-        if(e.key == "Enter"){
+        if(e.key === "Enter"){
             let expressionArray = e.target.value.split("\n")
-            expressionArray = expressionArray.filter(stg => stg.length != 0)
+            expressionArray = expressionArray.filter(stg => stg.length !== 0)
 
             evaluateExpressions(expressionArray, componentState.trackedAssets?.map(ta => ta.symbol))
         }
