@@ -68,10 +68,6 @@ function InspectVariables({componentState}){
     }
 
 
-    function updateGraph(){
-    }
-
-console.log("figure details.figuredata: ", figureDetails.figureData)
     return (
         <div id="inspect-variables" className="border-primary margin-primary create-bot-main-area">
             <div id="inspect-variables-figure">
@@ -87,7 +83,6 @@ console.log("figure details.figuredata: ", figureDetails.figureData)
                         })
                     }
                 </ul>
-                <Button text="update" onBtnClick={updateGraph}/>
             </div>
         </div>
     )
