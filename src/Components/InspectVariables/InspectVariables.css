@@ -1,4 +1,21 @@
 #inspect-variables {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#inspect-variables ul li {
+    list-style: none;
+    width: 10rem;
+    background-color: transparent;
+    border: solid white 0.1rem;
+    margin: var(--margin-primary);
+    border-color: white;
+    padding: 0.2rem;
+    font-weight: 900;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
 }

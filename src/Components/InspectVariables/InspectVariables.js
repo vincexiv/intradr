@@ -74,11 +74,11 @@ function InspectVariables({componentState}){
                 <LineGraph figureDetails={figureDetails}/>
             </div>
             <div>
-                <ul>
+                <ul id="variables">
                     {
                         componentState.variables.map(variable => {
                             return (
-                                <li key={variable.name} className="inspect-variables-li">{variable.name}</li>
+                                <li key={variable.name} className="variable-name">{variable.name}</li>
                             )
                         })
                     }
