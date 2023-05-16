@@ -1,13 +1,12 @@
 import React from "react";
 import "./Button.css"
 
-function Button({btnStyles, text, onBtnClick, onHover, btnType="default"}){
+function Button({btnStyles, text, onBtnClick, btnType="default"}){
 
     return (
         <button className={btnType}
                 style={btnStyles}
-                onClick={()=>onBtnClick()}
-                onHover={onHover}>
+                onClick={()=>onBtnClick()}>
             {text}
         </button>
     )
