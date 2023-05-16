@@ -24,7 +24,8 @@ function CreateBot({market = "US", index="N/A", limit=100}){
         market: market,
         index: index,
         portfolioSize: 0,
-        strategy: `You can write your strategy here.`
+        strategy: `You can write your strategy here.`,
+        expressionArray: []
     })
 
     useEffect(()=>{
@@ -42,7 +43,6 @@ function CreateBot({market = "US", index="N/A", limit=100}){
                                 untrackedAssets: getUntrackedAssets(data, componentState?.trackedAssets)
                             }
                         ))
-                        console.log("what: ", JSON.stringify(data.slice(0, 100)))
                     })
                 }else {
                     res.json().then(err => {
@@ -78,7 +78,7 @@ function CreateBot({market = "US", index="N/A", limit=100}){
         if(actionName === "do-your-math"){
             return <DoYourMath componentState={componentState} setComponentState={setComponentState} />
         }else if(actionName === "inspect-variables"){
-            return <InspectVariables />
+            return <InspectVariables componentState={componentState} />
         }else if(actionName === "backtest"){
             return <Backtest />
         }else if(actionName === "set-configurations"){
