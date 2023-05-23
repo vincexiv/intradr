@@ -29,10 +29,12 @@ function PlainList({componentState, variable, title}){
                             <div id={`${variable.name}-details`} className="details display-none"> 
                                 <div className="detail-item">
                                     <div className="name">Shape</div>
-                                    <div className="content">{` ${variable.shape? `(${variable.shape})` : ""}`}</div>
+                                    <div className="content">{`${variable.shape? `(${variable.shape})` : ""}`}</div>
                                 </div>
                                 <div className="detail-item">
-                                    <div className="name">Values</div>
+                                    <div className="name">
+                                        { Number(variable.shape) === 1? "Value" : "Values" }
+                                    </div>
                                     <div className="content">{variable.value}</div>
                                 </div>
                             </div>
