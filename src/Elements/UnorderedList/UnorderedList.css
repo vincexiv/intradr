@@ -1,0 +1,54 @@
+#unordered-list .details {
+    padding-left: 1rem;
+    max-height: 13vh;
+    overflow-y: auto;
+    margin-bottom: 0.8rem;
+}
+
+#unordered-list .details .detail-item {
+    display: flex;
+    gap: 2rem;
+}
+
+#unordered-list li {
+    cursor: pointer;
+}
+
+#unordered-list .display-none {
+    display: none;
+}
+
+#unordered-list li {
+    list-style: none;
+}
+
+#unordered-list .item-name-and-value {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+#unordered-list .name-and-shape {
+    display: flex;
+    gap: 0.7rem;
+}
+
+#unordered-list .item-name-and-value .name {
+    font-weight: 700;
+    color: rgba(128, 0, 128, 0.8);
+}
+
+#unordered-list .item-name-and-value .shape {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    font-style: italic;
+}
+
+#unordered-list .item-name-and-value .value {
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 50%;
+    /* display: flex;
+    justify-content: end; */
+}

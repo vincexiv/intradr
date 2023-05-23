@@ -18,6 +18,7 @@ function App() {
     constraintCount: 1,
     variables: [],
     bots: [{name: "xiv_bot", value: ""}],
+    fundamentals: [],
     market: "US",
     index: "N/A",
     limit: 100,
