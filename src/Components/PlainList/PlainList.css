@@ -5,6 +5,23 @@
     min-width: 13rem;
 }
 
+#plain-list .details {
+    padding-left: 1rem;
+}
+
+#plain-list .details .detail-item {
+    display: flex;
+    gap: 2rem;
+}
+
+#plain-list li {
+    cursor: pointer;
+}
+
+#plain-list .display-none {
+    display: none;
+}
+
 #plain-list #plain-list-title {
     padding-top: 0.5rem;
     padding-bottom: 0.8rem;
