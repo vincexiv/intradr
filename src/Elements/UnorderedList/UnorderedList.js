@@ -1,7 +1,7 @@
 import React, {useRef} from "react";
 import "./UnorderedList.css"
 
-function UnorderedList({componentState, variable}){
+function UnorderedList({variable}){
     const plainListRef = useRef()
     function toggleShowDetails(e, mainId, detailsId){
         const main = plainListRef.current.querySelector(`#${mainId}`)
@@ -12,31 +12,35 @@ function UnorderedList({componentState, variable}){
         main.querySelector(".value").classList.toggle("display-none")
     }
 
+    console.log("variable: ", variable)
+
     return (
         <ul ref={plainListRef} id="unordered-list">
             {
-                componentState[variable].map(variable => {
-                    return <li key={variable.name} onClick={(e)=>toggleShowDetails(e, `${variable.name}-main`, `${variable.name}-details`)}>
-                        <p id={`${variable.name}-main`} className="item-name-and-value">
-                            <span className="name-and-shape">
-                                <span className="name">{variable.name}</span>
-                                <span className="shape">{` ${variable.shape? `(${variable.shape})` : ""}`}</span>
-                            </span>
-                            <span className="value">{variable.value}</span>
-                        </p>
-                        <div id={`${variable.name}-details`} className="details display-none"> 
-                            <div className="detail-item">
-                                <div className="name">Shape</div>
-                                <div className="content">{`${variable.shape? `(${variable.shape})` : ""}`}</div>
-                            </div>
-                            <div className="detail-item">
-                                <div className="name">
-                                    { Number(variable.shape) === 1? "Value" : "Values" }
+                variable?.map(variable => {
+                    return (
+                        <li key={variable.name} onClick={(e)=>toggleShowDetails(e, `${variable.name}-main`, `${variable.name}-details`)}>
+                            <p id={`${variable.name}-main`} className="item-name-and-value">
+                                <span className="name-and-shape">
+                                    <span className="name">{variable.name}</span>
+                                    <span className="shape">{` ${variable.shape? `(${variable.shape})` : ""}`}</span>
+                                </span>
+                                <span className="value">{variable.value}</span>
+                            </p>
+                            <div id={`${variable.name}-details`} className="details display-none"> 
+                                <div className="detail-item">
+                                    <div className="name">Shape</div>
+                                    <div className="content">{`${variable.shape? `(${variable.shape})` : ""}`}</div>
                                 </div>
-                                <div className="content">{variable.value}</div>
+                                <div className="detail-item">
+                                    <div className="name">
+                                        { Number(variable.shape) === 1? "Value" : "Values" }
+                                    </div>
+                                    <div className="content">{variable.value}</div>
+                                </div>
                             </div>
-                        </div>
-                    </li>
+                        </li>
+                    )
                 })
             }
         </ul>

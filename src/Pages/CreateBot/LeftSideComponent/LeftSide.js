@@ -2,6 +2,7 @@ import React from "react";
 import "./LeftSide.css"
 import ItemList from "../../../Components/ItemList/ItemList";
 import { getUntrackedAssets } from "../UtilityFunctions";
+import { apiHost } from "../../../variables";
 
 function LeftSide({componentState, setComponentState}){
     function startTracking(trackedAsset){
@@ -14,6 +15,23 @@ function LeftSide({componentState, setComponentState}){
             trackedAssets: updatedTrackedAssets,
             portfolioSize: componentState.portfolioSize + 1
         }))
+
+        fetch(`${apiHost}/fundamentals`, {
+            method: 'POST',
+            headers: {"Content-Type": "application/json", "Accept": "application/json"},
+            body: JSON.stringify({ticker: trackedAsset.symbol})
+        }).then(res => {
+            if(res.ok){
+                res.json().then(data => {
+                    setComponentState(componentState => {
+                        return {
+                            ...componentState,
+                            fundamentals: [...componentState.fundamentals, data]
+                        }
+                    })
+                })
+            }
+        })
     }
 
     function stopTracking(untrackedAsset){

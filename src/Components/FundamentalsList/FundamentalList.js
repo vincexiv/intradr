@@ -1,12 +1,38 @@
-import React from "react";
+import React, {useRef} from "react";
+import ListItem from "../../Elements/ListItem/ListItem";
 import UnorderedList from "../../Elements/UnorderedList/UnorderedList";
 import "./FundamentalList.css"
 
 function FundamentalList({componentState, variable, title}){
+    const fundamentalListItemRef = useRef()
+
+    function toggleFundamentalDetailsShow(itemId){
+        const details = fundamentalListItemRef.current.querySelector(`#${itemId}`)
+        details.classList.toggle("display-none")
+    }
+
     return (
         <div id="fundamental-list" className="border-primary margin-primary">
             <h3 className="fundamental-list-title">{title}</h3>
-            <UnorderedList componentState={componentState} variable={variable} />
+            <ul ref={fundamentalListItemRef}>
+                {
+                    componentState.fundamentals.map(asset => {
+                        const assetDetails = componentState.trackedAssets.find(tAsset => tAsset.symbol == asset.name)
+                        console.log("asset details: ", assetDetails)
+                        return (
+                            <li key={`${asset.name}-li`} className="fundamental-list-item">
+                                <p className="header" onClick={()=>toggleFundamentalDetailsShow(`${asset.name}-info`)}>
+                                    <span className="long-name">{assetDetails.longName}</span>
+                                    <span className="symbol">{assetDetails.symbol}</span>
+                                </p>
+                                <div id={`${asset.name}-info`} className="display-none asset-info">
+                                    <UnorderedList variable={asset.value} />
+                                </div>
+                            </li>
+                        )
+                    })
+                }
+            </ul>
         </div>
     )
 }
