@@ -9,6 +9,7 @@
     padding-left: 1rem;
     max-height: 13vh;
     overflow-y: auto;
+    margin-bottom: 0.8rem;
 }
 
 #plain-list .details .detail-item {
