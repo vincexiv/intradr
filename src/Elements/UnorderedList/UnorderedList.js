@@ -35,7 +35,7 @@ function UnorderedList({variable}){
                                 <div className="detail-item">
                                     <div className="name">
                                         {
-                                            Number(variable.shape) === 1? "Value" : "Values"
+                                            (!Number(variable.shape)) || (Number(variable.shape) === 1)? "Value" : "Values"
                                         }
                                     </div>
                                     <div className="content">{variable.value}</div>
