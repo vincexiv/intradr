@@ -20,9 +20,25 @@
     gap: 2rem;
 }
 
-#plain-list .item-name-and-value span {
+#plain-list .name-and-shape {
+    display: flex;
+    gap: 0.7rem;
+}
+
+#plain-list .item-name-and-value .name {
+    font-weight: 700;
+    color: rgba(128, 0, 128, 0.8);
+}
+
+#plain-list .item-name-and-value .shape {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    font-style: italic;
+}
+
+#plain-list .item-name-and-value .value {
     overflow-x: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    max-width: 60%;
+    width: 50%;
 }

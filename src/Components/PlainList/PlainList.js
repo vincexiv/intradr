@@ -10,8 +10,11 @@ function PlainList({componentState, variable, title}){
                     componentState[variable].map(variable => {
                         return <li key={variable.name}>
                             <p className="item-name-and-value">
-                                <span>{variable.name}</span>
-                                <span>{variable.value}</span>
+                                <span className="name-and-shape">
+                                    <span className="name">{variable.name}</span>
+                                    <span className="shape">{` ${variable.shape? `(${variable.shape})` : ""}`}</span>
+                                </span>
+                                <span className="value">{variable.value}</span>
                             </p>
                         </li>
                     })
