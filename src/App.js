@@ -17,7 +17,7 @@ function App() {
     trackedAssets: [],
     constraintCount: 1,
     variables: [],
-    bots: [{name: "xiv_bot", value: ""}],
+    strategies: [{name: "xiv_bot", value: ""}],
     fundamentals: [],
     market: "US",
     index: "N/A",
