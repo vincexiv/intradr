@@ -42,7 +42,8 @@ function LeftSide({componentState, setComponentState}){
             ...componentState,
             untrackedAssets: getUntrackedAssets(fullAssetList, updatedTrackedAssets),
             trackedAssets: updatedTrackedAssets,
-            portfolioSize: componentState.portfolioSize - 1
+            portfolioSize: componentState.portfolioSize - 1,
+            fundamentals: componentState.fundamentals.filter(f => f.name != untrackedAsset.symbol)
         }))
     }
 
