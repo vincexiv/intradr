@@ -2,4 +2,8 @@
     overflow-y: auto;
     overflow-x: hidden;
     padding-bottom: 1rem;
+    border-top: 1rem var(--color-primary) solid;
+    border-bottom: 1rem var(--color-primary) solid;
+    border-color: var(--color-primary);
+    box-sizing: border-box;
 }
