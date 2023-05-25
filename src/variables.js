@@ -1,3 +1,3 @@
-const apiHost = "http://localhost:5000"
+const apiHost = "https://intradr-api.onrender.com"
 
 export {apiHost}
