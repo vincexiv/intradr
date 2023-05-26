@@ -1,3 +1,10 @@
+/* tailwindcss setup */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* custom css */
 :root {
   font-size: clamp(10px, 1.3vh, 16px);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
