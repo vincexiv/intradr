@@ -23,7 +23,7 @@ function App() {
     index: "N/A",
     limit: 100,
     portfolioSize: 0,
-    strategy: `You can write your strategy here.`,
+    strategy: `Write something...`,
     expressionArray: [],
     figureDetails: {
         backdate_period: 10,
