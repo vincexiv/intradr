@@ -20,7 +20,7 @@ function Navbar(){
                     <div className="flex justify-between items-center">
                         <Link to='/' className="logo flex items-center justify-center font-bold ">
                             <img src="logo.png" className="md:w-32 w-16" alt="logo"/>
-                            <p className="md:ml-2 ml-1">inTradr</p>
+                            <p className="md:ml-2 ml-1 md:text-5xl text-3xl">inTradr</p>
                         </Link>
                         <button onClick={() => setOpen((prev) => !prev)} className=' sm:hidden text-2xl text-gray-900'>
                             <FaBars />
@@ -30,7 +30,7 @@ function Navbar(){
                     <div className='md:flex hidden text-white'>
                         <ul className="md:flex items-center md:text-xl font-medium">
                             {navLinks.map((nav) => (
-                                <li key={nav.id} className="navlink md:mx-4 mx-2 md:my-0 my-2 hover:text-green-100">
+                                <li key={nav.id} className="navlink md:mx-4 mx-2 md:my-0 my-2 hover:text-[#FE741A]">
                                     <Link to={nav.route}>
                                         {nav.name}
                                     </Link>
@@ -50,7 +50,7 @@ function Navbar(){
                     </div>
                     <ul className="flex flex-col items-center text-base font-medium space-y-8">
                         {navLinks.map((nav) => (
-                            <li key={nav.id} onClick={() => setOpen((prev) => !prev)} className="navlink md:mx-4 mx-2 md:my-0 my-2 hover:text-green-100">
+                            <li key={nav.id} onClick={() => setOpen((prev) => !prev)} className="navlink md:mx-4 mx-2 md:my-0 my-2 hover:text-[#FE741A]">
                                 <Link to={nav.route}>
                                     {nav.name}
                                 </Link>

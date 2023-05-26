@@ -3,6 +3,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+@layer components {
+  .navlink {
+      @apply md:text-2xl
+  }
+}
+
+
 
 /* custom css */
 :root {
@@ -31,6 +40,7 @@
 
 body {
   background-color: var(--color-background);
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .border-primary {

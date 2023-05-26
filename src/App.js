@@ -1,11 +1,14 @@
 // import logo from './logo.svg';
 import React, {useEffect, useState} from 'react'
-import { Routes, Route, useNavigate, useLocation} from 'react-router-dom';
+import { Routes, Route, useNavigate, useLocation, BrowserRouter} from 'react-router-dom';
 import './App.css';
 import Navbar from './Components/Navbar/Navbar';
 import CreateBot from './Pages/CreateBot/CreateBot';
 import { availableAssets } from './Pages/CreateBot/UtilityVariables';
 import { getUntrackedAssets } from './Pages/CreateBot/UtilityFunctions';
+import Footer from './Components/Footer/Footer';
+import Strategies from './Pages/Strategies/Strategies';
+import Backtesting from './Pages/Backtesting/Backtesting';
 
 function App() {
   const location = useLocation()
@@ -39,10 +42,15 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
-      <Routes>
-          <Route path="/" element={<CreateBot componentState={componentState} setComponentState={setComponentState}/>} />
-      </Routes>
+      {/* <BrowserRouter> */}
+        <Navbar />
+        <Routes>
+            <Route path="/" element={<CreateBot componentState={componentState} setComponentState={setComponentState}/>} />
+            <Route path='/strategies' element={ <Strategies /> } />
+            <Route path='/backtesting' element={ <Backtesting /> } />
+        </Routes>
+        <Footer />
+      {/* </BrowserRouter> */}
     </div>
   );
 }
