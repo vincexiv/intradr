@@ -17,7 +17,7 @@ function MiddleSide({setComponentState, getActionComponent}){
                     <li className="margin-primary border-primary">
                         <Button
                             btnStyles={{minWidth: "10rem"}}
-                            text="build strategy"
+                            text="create variables"
                             onBtnClick={()=>openAction('do-your-math')} />
                     </li>
                     <li className="margin-primary border-primary">
