@@ -20,7 +20,6 @@ function DoYourMath({componentState, setComponentState}){
         // })
 
         // return [...existingVariables, ...newVariables]
-        console.log(newVariables)
         return newVariables
     }
 

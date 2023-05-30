@@ -12,8 +12,6 @@ function UnorderedList({variable}){
         main.querySelector(".value").classList.toggle("display-none")
     }
 
-    console.log("variable: ", variable)
-
     return (
         <ul ref={plainListRef} id="unordered-list">
             {

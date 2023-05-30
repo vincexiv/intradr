@@ -6,7 +6,6 @@ function Search({onSearchSubmit}){
     function onSubmit(e){
         e.preventDefault()
         const searchInput = e.target.querySelector("#search-content").value
-        console.log(searchInput)
     }
 
     return (

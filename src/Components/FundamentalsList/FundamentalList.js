@@ -18,7 +18,6 @@ function FundamentalList({componentState, variable, title}){
                 {
                     componentState.fundamentals.map(asset => {
                         const assetDetails = componentState.trackedAssets.find(tAsset => tAsset.symbol == asset.name)
-                        console.log("asset details: ", assetDetails)
                         return (
                             <li key={`${asset.name}-li`} className="fundamental-list-item">
                                 <p className="header" onClick={()=>toggleFundamentalDetailsShow(`${asset.name}-info`)}>
