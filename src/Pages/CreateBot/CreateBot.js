@@ -7,36 +7,9 @@ import Constraints from "../../Components/Constraints/Constraints";
 import LeftSide from "./LeftSideComponent/LeftSide";
 import RightSide from "./RightSideComponent/RightSide";
 import MiddleSide from "./MiddleSideComponent/MiddleSide";
-import { apiHost } from "../../variables";
-import { getUntrackedAssets } from "./UtilityFunctions";
 import Backtest from "../../Components/Backtest/Backtest";
 
 function CreateBot({componentState, setComponentState}){
-    useEffect(()=>{
-        if(setComponentState){
-            fetch(`${apiHost}/assets?market=${componentState.market}&index=${componentState.index}&limit=${componentState.limit}`, {
-                method: "GET",
-                headers: {'Accept': 'application/json'},
-            }).then(res => {
-                if(res.ok){
-                    res.json().then(data => {
-                        setComponentState(componentState => (
-                            {
-                                ...componentState,
-                                fullAssetList: data,
-                                untrackedAssets: getUntrackedAssets(data, componentState?.trackedAssets)
-                            }
-                        ))
-                    })
-                }else {
-                    res.json().then(err => {
-                        console.warn(err)
-                    })
-                }
-            })
-        }        
-    }, [])
-
     function updateConstraintCount(action){
         if(action === "reduce"){
             if(componentState.constraintCount > 1){
