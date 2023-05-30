@@ -1,11 +1,12 @@
 import React from "react";
 import "./Search.css";
 
-function Search({onSearchSubmit}){
+function Search({}){
 
     function onSubmit(e){
         e.preventDefault()
         const searchInput = e.target.querySelector("#search-content").value
+        console.log(searchInput)
     }
 
     return (

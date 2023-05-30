@@ -1,9 +1,8 @@
 import React, {useRef} from "react";
-import ListItem from "../../Elements/ListItem/ListItem";
 import UnorderedList from "../../Elements/UnorderedList/UnorderedList";
 import "./FundamentalList.css"
 
-function FundamentalList({componentState, variable, title}){
+function FundamentalList({componentState, title}){
     const fundamentalListItemRef = useRef()
 
     function toggleFundamentalDetailsShow(itemId){
@@ -17,7 +16,7 @@ function FundamentalList({componentState, variable, title}){
             <ul ref={fundamentalListItemRef}>
                 {
                     componentState.fundamentals.map(asset => {
-                        const assetDetails = componentState.trackedAssets.find(tAsset => tAsset.symbol == asset.name)
+                        const assetDetails = componentState.trackedAssets.find(tAsset => tAsset.symbol === asset.name)
                         return (
                             <li key={`${asset.name}-li`} className="fundamental-list-item">
                                 <p className="header" onClick={()=>toggleFundamentalDetailsShow(`${asset.name}-info`)}>
