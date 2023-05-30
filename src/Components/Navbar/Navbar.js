@@ -13,6 +13,9 @@ function Navbar({setComponentState}){
             <div className="content">
                 <h2 className="nav-item" onClick={()=>updateActivePage('home')}>Intradr</h2>
                 <ul>
+                    <li className="nav-item" onClick={()=>updateActivePage('home')}>
+                        <h3>home</h3>
+                    </li>
                     <li className="nav-item" onClick={()=>updateActivePage('demo')}>
                         <h3>Demo</h3>
                     </li>
