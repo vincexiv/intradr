@@ -1,5 +1,6 @@
 import React from "react";
 import "./DemoMenu.css"
+import DemoListItem from "../../Elements/DemoListItem";
 
 function DemoMenu({componentState, setComponentState}){
     const generalDemos = componentState.demos?.filter(demo => demo.type === "general")
@@ -10,15 +11,25 @@ function DemoMenu({componentState, setComponentState}){
             <div id="general-demos" className="demo-group-item">
                 <h2 className="demo-head">General Demos</h2>
                 <ul>
-                    <li>Calculating the Sharpe Ratio</li>
+                    {
+                        generalDemos.map(demo => {
+                            return (
+                                <DemoListItem key={demo.name} demo={demo}/>
+                            )
+                        })
+                    }
                 </ul>
             </div>
             <div id="function-demos" className="demo-group-item">
                 <h2 className="demo-head">Functions</h2>
                 <ul>
-                    <li>
-                        <p></p>
-                    </li>
+                    {
+                        functionDemos.map(demo => {
+                            return (
+                                <DemoListItem key={demo.name} demo={demo}/>
+                            )
+                        })
+                    }
                 </ul>
             </div>
         </div>

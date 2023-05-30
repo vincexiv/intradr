@@ -1,0 +1,46 @@
+.demo-list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-top: 0.05rem;
+    margin-bottom: 0.05rem;
+    padding: 0.15rem 0.3rem 0.15rem 0.6rem;
+    cursor: pointer;
+}
+
+.demo-list-item #text {
+    padding: 0.2rem;
+    padding-left: 0.5rem;
+    display: flex;
+    align-items: center;
+
+}
+
+.demo-list-item #text:hover {
+    background-color: var(--color-gold);
+}
+
+.demo-list-item #text {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.demo-list-item #long-name {
+    width: 15rem;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.demo-list-item .demo-description {
+    display: flex;
+    justify-content: left;
+}
+
+.demo-list-item .display-none {
+    display: none;
+}
+
