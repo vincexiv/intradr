@@ -9,6 +9,10 @@
     border-bottom: 0.2rem solid var(--color-gold);
 }
 
+#navbar .logo {
+    cursor: pointer;
+}
+
 #navbar .nav-item {
     cursor: pointer;
     padding: 0.7rem;

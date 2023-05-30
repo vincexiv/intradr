@@ -11,9 +11,8 @@ function Navbar({componentState, setComponentState}){
     return (
         <div id="navbar">
             <div className="content">
-                <h2 className={componentState.activePage === "home"? "nav-item active": "nav-item"}
-                    onClick={()=>updateActivePage('home')}>
-                        Intradr
+                <h2 className="logo" onClick={()=>updateActivePage('home')}>
+                    Intradr
                 </h2>
                 <ul>
                     <li className={componentState.activePage === "home"? "nav-item active": "nav-item"}
