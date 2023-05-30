@@ -5,6 +5,15 @@ import DemoListItem from "../../Elements/DemoListItem";
 function DemoMenu({componentState, setComponentState}){
     const generalDemos = componentState.demos?.filter(demo => demo.type === "general")
     const functionDemos = componentState.demos?.filter(demo => demo.type === "function")
+
+    function updateActiveDemo(newDemo){
+        setComponentState(componentState => {
+            return {
+                ...componentState,
+                activeDemo: newDemo
+            }
+        })
+    }
     
     return (
         <div id="demo-menu" className="border-primary">
@@ -14,7 +23,7 @@ function DemoMenu({componentState, setComponentState}){
                     {
                         generalDemos.map(demo => {
                             return (
-                                <DemoListItem key={demo.name} demo={demo}/>
+                                <DemoListItem key={demo.name} demo={demo} onClick={updateActiveDemo}/>
                             )
                         })
                     }
@@ -26,7 +35,7 @@ function DemoMenu({componentState, setComponentState}){
                     {
                         functionDemos.map(demo => {
                             return (
-                                <DemoListItem key={demo.name} demo={demo}/>
+                                <DemoListItem key={demo.name} demo={demo} onClick={updateActiveDemo}/>
                             )
                         })
                     }

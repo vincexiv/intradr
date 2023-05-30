@@ -15,7 +15,7 @@ function App() {
   const [componentState, setComponentState] = useState({
     activePage: location.pathname || localStorage.getItem('activePage') || 'home',
     demos: demos,
-    activeDemo: 1,
+    activeDemo: demos[0],
     action: "do-your-math",
     fullAssetList: availableAssets,
     untrackedAssets: getUntrackedAssets(availableAssets, []),

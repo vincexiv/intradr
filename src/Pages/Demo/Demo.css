@@ -2,3 +2,9 @@
     padding: 3rem;
     padding-bottom: 0;
 }
+
+#demo .demo-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}

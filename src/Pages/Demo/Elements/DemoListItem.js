@@ -13,7 +13,7 @@ function DemoListItem({demo, onClick}){
     return (
         <li ref={demoRef} className="demo-list-item border-primary margin-primary">
             <div id="text">
-                <p id="long-name">{demo.name}</p>
+                <p id="long-name" onClick={()=>onClick(demo)}>{demo.name}</p>
                 <div id={`description-btn-${demo.id}`} className="description-btn">
                     <Button 
                         key={`btn-${demo.name}`}
