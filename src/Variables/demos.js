@@ -9,25 +9,25 @@ let demos = [
         name: "_transpose(<matrix>)",
         type: "function",
         description: "transpose a matrix",
-        url: ""
+        url: "https://www.youtube.com/embed/FZ0dUTdSyi4"
     },
     {
         name: "_mmult(<matrix>, <matrix>)",
         type: "function",
         description: "matrix multiply two matrix",
-        url: ""
+        url: "https://www.youtube.com/embed/LX3H7FX80pU"
     },
     {
         name: "_avg(<matrix>)",
         type: "function",
         description: "find the average of elements in a matrix",
-        url: ""
+        url: "https://www.youtube.com/embed/FZ0dUTdSyi4"
     },
     {
         name: "_mavg(<matrix>)",
         type: "function",
         description: "find the average of elements in a matrix but return a matrix of those values with same shape as the original matrix",
-        url: ""
+        url: "https://www.youtube.com/embed/jOhqLXi6KNI"
     },
 ]
 
