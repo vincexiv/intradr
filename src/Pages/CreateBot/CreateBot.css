@@ -46,8 +46,9 @@
         display: grid;
         row-gap: 3rem;
         grid-template-areas: 
-                "c c"
-                "a b";
+                "c"
+                "a"
+                "b";
     }
 
     #create-bot #left-side,
@@ -108,7 +109,8 @@
     }
 
     #create-bot #item-list,
-    #create-bot #plain-list {
+    #create-bot #plain-list,
+    #create-bot #fundamental-list {
         width: 30rem;
     }    
 }
