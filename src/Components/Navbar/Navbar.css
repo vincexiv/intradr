@@ -11,6 +11,14 @@
 
 #navbar .nav-item {
     cursor: pointer;
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar .nav-item:hover {
+    border-bottom: solid 0.1rem var(--color-background);
 }
 
 #navbar .content {
