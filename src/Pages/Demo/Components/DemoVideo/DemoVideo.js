@@ -22,11 +22,14 @@ function DemoVideo({componentState}){
     return (
         <div id="demo-video" >
             <div className="wrapper">
-                <iframe src={componentState.activeDemo.url}
+                <iframe
                     width={widthAndHeight.width}
                     height={widthAndHeight.height}
-                    allow="autoplay">
-                </iframe>
+                    src={componentState.activeDemo.url}
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                    </iframe>
             </div>
         </div>
     )

@@ -3,7 +3,7 @@ let demos = [
         name: "Calculating the Sharpe Ratio",
         type: "general",
         description: "Calculate the sharpe ratio of the portfolio",
-        url: ""
+        url:"https://www.youtube.com/embed/pqB4ZmXYtVs"
     },
     {
         name: "_transpose(<matrix>)",
