@@ -17,7 +17,8 @@
     justify-content: center;
 }
 
-#navbar .nav-item:hover {
+#navbar .nav-item:hover,
+#navbar .nav-item.active {
     border-bottom: solid 0.1rem var(--color-background);
 }
 

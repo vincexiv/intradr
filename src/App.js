@@ -46,7 +46,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar setComponentState={setComponentState} />
+      <Navbar componentState={componentState} setComponentState={setComponentState} />
       <Routes>
         <Route exact path="/home" element={<CreateBot componentState={componentState} setComponentState={setComponentState}/>} />
           <Route exact path="/demo" element={<Demo componentState={componentState} setComponentState={setComponentState}/>} />
