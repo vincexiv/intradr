@@ -8,3 +8,9 @@
     align-items: center;
     gap: 2rem;
 }
+
+@media screen and (max-width: 70rem){
+    #demo .demo-container{
+        flex-direction: column-reverse;
+    }
+}

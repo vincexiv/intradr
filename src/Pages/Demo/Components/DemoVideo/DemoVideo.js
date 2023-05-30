@@ -12,11 +12,24 @@ function DemoVideo({componentState}){
     }, [])
 
     function getWidth(){
-        return window.innerWidth - (35 * getRemSize())
+        const width = screen.innerWidth - (35 * getRemSize())
+
+        if(window.innerWidth < (70 * getRemSize())){
+            return window.innerWidth - (6 * getRemSize())
+        }else {
+            return width
+        }
     }
 
     function getHeight(){
-        return 0.35*window.innerWidth
+        const height =  0.35*window.innerWidth
+
+        if(window.innerWidth < (70 * getRemSize())){
+            const width = getWidth()
+            return width * 0.7
+        }else {
+            return height
+        }
     }
     
     return (
