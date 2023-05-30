@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import "./CreateBot.css"
 import DoYourMath from "../../Components/DoYourMath/DoYourMath";
 import InspectVariables from "../../Components/InspectVariables/InspectVariables";
