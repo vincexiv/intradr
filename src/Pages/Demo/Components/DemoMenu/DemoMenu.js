@@ -17,7 +17,7 @@ function DemoMenu({componentState, setComponentState}){
     
     return (
         <div id="demo-menu" className="border-primary">
-            <div id="general-demos" className="demo-group-item">
+            <div id="general-demos" className="demo-group-item border-primary margin-primary">
                 <h2 className="demo-head">General Demos</h2>
                 <ul>
                     {
@@ -29,7 +29,7 @@ function DemoMenu({componentState, setComponentState}){
                     }
                 </ul>
             </div>
-            <div id="function-demos" className="demo-group-item">
+            <div id="function-demos" className="demo-group-item border-primary margin-primary">
                 <h2 className="demo-head">Functions</h2>
                 <ul>
                     {
