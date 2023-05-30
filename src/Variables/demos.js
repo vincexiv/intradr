@@ -1,6 +1,6 @@
 let demos = [
     {
-        name: "Calculating the Sharpe Ratio",
+        name: "Sharpe Ratio",
         type: "general",
         description: "Calculate the sharpe ratio of the portfolio",
         url:"https://www.youtube.com/embed/pqB4ZmXYtVs"
