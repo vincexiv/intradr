@@ -33,11 +33,14 @@
     overflow-x: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    font-weight: 700;
 }
 
 .demo-list-item .demo-description {
     display: flex;
     justify-content: left;
+    width: 100%;
+    font-style: italic;
 }
 
 .demo-list-item .display-none {

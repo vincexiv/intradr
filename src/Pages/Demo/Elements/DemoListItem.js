@@ -8,7 +8,6 @@ function DemoListItem({demo, onClick}){
     function toggleDescription(demo){
         const demoDescriptionElement = demoRef.current.querySelector(`#demo-description-${demo.id}`)
         demoDescriptionElement.classList.toggle("display-none")
-        console.log(demo)
     }
 
     return (
