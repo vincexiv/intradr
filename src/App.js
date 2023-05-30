@@ -6,9 +6,11 @@ import Navbar from './Components/Navbar/Navbar';
 import CreateBot from './Pages/CreateBot/CreateBot';
 import { availableAssets } from './Pages/CreateBot/UtilityVariables';
 import { getUntrackedAssets } from './Pages/CreateBot/UtilityFunctions';
+import Demo from './Pages/Demo/Demo';
 
 function App() {
   const location = useLocation()
+  const navigate = useNavigate()
   const [componentState, setComponentState] = useState({
     activePage: location.pathname || localStorage.getItem('activePage') || 'home',
     action: "do-your-math",
@@ -17,7 +19,7 @@ function App() {
     trackedAssets: [],
     constraintCount: 1,
     variables: [],
-    strategies: [{name: "xiv_bot", value: ""}],
+    portfolios: [{name: "xiv", value: ""}],
     fundamentals: [],
     market: "US",
     index: "N/A",
@@ -38,10 +40,16 @@ function App() {
     }
   })
 
+  useEffect(()=>{
+    navigate(componentState.activePage)
+  }, [componentState, navigate])
+
   return (
     <div className="App">
-      <Navbar />
+      <Navbar setComponentState={setComponentState} />
       <Routes>
+        <Route exact path="/home" element={<CreateBot componentState={componentState} setComponentState={setComponentState}/>} />
+          <Route exact path="/demo" element={<Demo componentState={componentState} setComponentState={setComponentState}/>} />
           <Route path="/" element={<CreateBot componentState={componentState} setComponentState={setComponentState}/>} />
       </Routes>
     </div>

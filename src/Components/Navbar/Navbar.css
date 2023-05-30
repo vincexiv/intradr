@@ -9,6 +9,10 @@
     border-bottom: 0.2rem solid var(--color-gold);
 }
 
+#navbar .nav-item {
+    cursor: pointer;
+}
+
 #navbar .content {
     display: flex;
     justify-content: space-between;
