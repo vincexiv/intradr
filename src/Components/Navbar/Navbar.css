@@ -1,4 +1,28 @@
 #navbar {
     height: 5rem;
     background-color: purple;
+    color: var(--color-background);
+    padding-left: 3rem;
+    padding-right: 3rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 0.2rem solid var(--color-gold);
+}
+
+#navbar .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#navbar ul {
+    display: flex;
+    min-width: 30%;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+#navbar ul li {
+    list-style: none;
 }
