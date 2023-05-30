@@ -12,7 +12,7 @@ function DemoVideo({componentState}){
     }, [])
 
     function getWidth(){
-        const width = screen.innerWidth - (35 * getRemSize())
+        const width = window.innerWidth - (35 * getRemSize())
 
         if(window.innerWidth < (70 * getRemSize())){
             return window.innerWidth - (6 * getRemSize())
