@@ -1,0 +1,24 @@
+#demo-menu {
+    width: 25rem;
+    padding: 1rem;
+    margin: var(--margin-primary);
+    background-color: var(--color-primary);
+    height: 80vh;
+}
+
+#demo-menu .demo-head {
+    color: purple;
+    font-size: 1.3rem;
+}
+
+#demo-menu .demo-group-item {
+    margin-bottom: 1rem;
+}
+
+#demo-menu ul {
+    margin-left: 1rem;
+}
+
+#demo-menu ul li {
+    list-style: none;
+}

@@ -7,12 +7,15 @@ import CreateBot from './Pages/CreateBot/CreateBot';
 import { availableAssets } from './Pages/CreateBot/UtilityVariables';
 import { getUntrackedAssets } from './Pages/CreateBot/UtilityFunctions';
 import Demo from './Pages/Demo/Demo';
+import demos from './Variables/demos';
 
 function App() {
   const location = useLocation()
   const navigate = useNavigate()
   const [componentState, setComponentState] = useState({
     activePage: location.pathname || localStorage.getItem('activePage') || 'home',
+    demos: demos,
+    activeDemo: 1,
     action: "do-your-math",
     fullAssetList: availableAssets,
     untrackedAssets: getUntrackedAssets(availableAssets, []),
