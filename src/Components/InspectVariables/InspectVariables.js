@@ -19,17 +19,19 @@ function InspectVariables({componentState, setComponentState}){
             })
         }).then(res => {
             if(res.ok){
-                res.json().then(data => {  
-                    setComponentState(componentState => {
-                        return {
-                            ...componentState,
-                            figureDetails: {
-                                ...componentState.figureDetails,
-                                xvals: getXvals(data),
-                                figureData: getFigureData(data)
-                            } 
-                        }
-                    })
+                res.json().then(data => { 
+                    if(Object.keys(data.graph_data).length > 0){
+                        setComponentState(componentState => {
+                            return {
+                                ...componentState,
+                                figureDetails: {
+                                    ...componentState.figureDetails,
+                                    xvals: getXvals(data),
+                                    figureData: getFigureData(data)
+                                } 
+                            }
+                        })
+                    }
                 })
             }else{
                 res.json().then(error => console.warn(error))

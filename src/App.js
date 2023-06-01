@@ -33,10 +33,10 @@ function App() {
     figureDetails: {
         backdate_period: 10,
         graph_type: "line",
-        xvals: [],
+        xvals: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
         figureData: [{
-            yvals: [],
-            title: "",
+            yvals: [34, 12, 13, 4, 1, 13, 13, 41, 49, 9],
+            title: "Example",
             lineGraphStyle: {}
         }],
         plotVariables: []
