@@ -23,7 +23,7 @@ function DemoMenu({componentState, setComponentState}){
                     {
                         generalDemos.map(demo => {
                             return (
-                                <DemoListItem key={demo.name} demo={demo} onClick={updateActiveDemo}/>
+                                <DemoListItem key={demo.name} demo={demo} activeDemo={componentState.activeDemo} onClick={updateActiveDemo}/>
                             )
                         })
                     }
@@ -35,7 +35,7 @@ function DemoMenu({componentState, setComponentState}){
                     {
                         functionDemos.map(demo => {
                             return (
-                                <DemoListItem key={demo.name} demo={demo} onClick={updateActiveDemo}/>
+                                <DemoListItem key={demo.name} activeDemo={componentState.activeDemo} demo={demo} onClick={updateActiveDemo}/>
                             )
                         })
                     }

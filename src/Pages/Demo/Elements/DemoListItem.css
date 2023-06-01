@@ -19,6 +19,10 @@
 }
 
 .demo-list-item #text:hover {
+    border: solid 0.1rem var(--color-gold);
+}
+
+.demo-list-item #text.active {
     background-color: var(--color-gold);
 }
 

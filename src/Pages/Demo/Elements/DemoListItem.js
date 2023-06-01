@@ -2,7 +2,7 @@ import React, {useRef} from "react";
 import "./DemoListItem.css"
 import Button from "../../../Elements/Button/Botton";
 
-function DemoListItem({demo, onClick}){
+function DemoListItem({demo, activeDemo, onClick}){
     const demoRef = useRef()
 
     function toggleDescription(demo){
@@ -12,7 +12,7 @@ function DemoListItem({demo, onClick}){
 
     return (
         <li ref={demoRef} className="demo-list-item border-primary margin-primary">
-            <div id="text">
+            <div id="text" className={demo.id === activeDemo.id? "active border-primary": "border-primary"}>
                 <p id="long-name" onClick={()=>onClick(demo)}>{demo.name}</p>
                 <div id={`description-btn-${demo.id}`} className="description-btn">
                     <Button 
