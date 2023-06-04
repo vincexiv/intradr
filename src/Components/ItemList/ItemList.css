@@ -19,7 +19,6 @@
     flex-direction: column;
     overflow-y: auto;
     max-height: 12rem;
-    overflow-y: auto;
     margin-top: 1rem;
     padding-bottom: 1rem;
 }

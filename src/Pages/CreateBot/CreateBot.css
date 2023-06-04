@@ -55,6 +55,7 @@
 
     #create-bot #middle-side {
         width: calc(100vw - 31rem);
+        margin-top: 0;
     }
 
     #create-bot #right-side {

@@ -12,7 +12,5 @@
 }
 
 #plain-list .the-list {
-    max-height: 40vh;
     padding-right: 0.5rem;
-    overflow-y: scroll;
 }
