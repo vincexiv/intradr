@@ -4,6 +4,7 @@
     justify-content: center;
     padding: var(--val) var(--val) 0 var(--val);
     margin-bottom: 4rem;
+    margin-top: 5rem;
 }
 
 #create-bot .create-bot-main-area {
