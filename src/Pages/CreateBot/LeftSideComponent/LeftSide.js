@@ -48,7 +48,7 @@ function LeftSide({componentState, setComponentState}){
     }
 
     return (
-        <div id="left-side" className="side">
+        <div id="left-side" className="border-primary margin-primary side">
             <ItemList
                     subject="Assets"
                     clickActionName="Track"

@@ -18,7 +18,7 @@ function ItemList({subject, itemList=[], clickActionName="Track", clickActionFun
 
 
     return (
-        <div id="item-list" className="border-primary margin-primary">
+        <div id="item-list" className="border-primary">
             <h2 className="margin-primary">{subject}</h2>
             <Search />
 
