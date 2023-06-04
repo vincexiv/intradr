@@ -3,6 +3,8 @@
     padding: 1rem;
     width: calc(20vw - 4*var(--margin-primary));
     min-width: 23rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 #fundamental-list ul {
