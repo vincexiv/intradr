@@ -5,6 +5,12 @@
     min-width: 23rem;
 }
 
+#fundamental-list ul {
+    max-height: 60vh;
+    padding-right: 0.5rem;
+    overflow-y: scroll;
+}
+
 #fundamental-list .display-none {
     display: none;
 }

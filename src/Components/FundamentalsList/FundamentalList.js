@@ -13,7 +13,7 @@ function FundamentalList({componentState, title}){
     return (
         <div id="fundamental-list" className="border-primary margin-primary">
             <h3 className="fundamental-list-title">{title}</h3>
-            <ul ref={fundamentalListItemRef}>
+            <ul ref={fundamentalListItemRef} className='the-list'>
                 {
                     componentState.fundamentals.map(asset => {
                         const assetDetails = componentState.trackedAssets.find(tAsset => tAsset.symbol === asset.name)

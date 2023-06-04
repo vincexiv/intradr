@@ -1,6 +1,6 @@
 #item-list {
     width: calc(25vw - 2*var(--margin-primary));
-    min-width: 25rem;
+    min-width: 27rem;
     height: max-content;
     max-height: 20rem;
     background-color: var(--color-primary);
