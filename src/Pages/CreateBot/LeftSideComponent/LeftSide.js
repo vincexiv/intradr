@@ -61,6 +61,13 @@ function LeftSide({componentState, setComponentState}){
                     itemList={componentState?.trackedAssets}
                     clickActionFunction={stopTracking}
                     emptyListMessage="You aren't tracking any assets yet. Click 'track' on the available assets to add it to this list"/>
+            <ItemList
+                    subject="Portfolios"
+                    clickActionName="Track"
+                    enableSearch={false}
+                    itemList={componentState?.porfolios}
+                    clickActionFunction={startTracking}
+                    emptyListMessage="You currently don't have any portfolio yet. Track items, set configurations then create one"/>
         </div>
     )
 }

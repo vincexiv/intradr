@@ -6,9 +6,8 @@ import FundamentalList from "../../../Components/FundamentalsList/FundamentalLis
 function RightSide({componentState}){
     return (
         <div id="right-side" className="border-primary margin-primary side">
-            <PlainList componentState={componentState} variable="variables" title="Variables"/>
             <FundamentalList componentState={componentState} variable="fundamentals" title="Fundamentals" />
-            <PlainList componentState={componentState} variable="portfolios" title="Portfolios"/>
+            <PlainList componentState={componentState} variable="variables" title="Variables"/>
         </div>
     )
 }
