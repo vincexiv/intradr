@@ -16,7 +16,7 @@
 }
 
 #list-item #long-name {
-    width: 14vw;
+    width: 80%;
     overflow-x: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
