@@ -14,25 +14,25 @@ function MiddleSide({setComponentState, getActionComponent}){
         <div id="middle-side">
             <div>
                 <ul className="actions">
-                    <li className="margin-primary border-primary">
+                    <li className="border-primary">
                         <Button
                             btnStyles={{minWidth: "10rem"}}
                             text="create variables"
                             onBtnClick={()=>openAction('do-your-math')} />
                     </li>
-                    <li className="margin-primary border-primary">
+                    <li className=" border-primary">
                         <Button
                             btnStyles={{minWidth: "10rem"}} 
                             text="inspect variables"
                             onBtnClick={()=>openAction('inspect-variables')} />
                     </li>
-                    <li className="margin-primary border-primary">
+                    <li className="border-primary">
                         <Button
                             btnStyles={{minWidth: "10rem"}}
                             text="backtest"
                             onBtnClick={()=>openAction('backtest')} />
                     </li>
-                    <li className="margin-primary border-primary">
+                    <li className="border-primary">
                         <Button
                             btnStyles={{minWidth: "10rem"}} 
                             text="set configurations"
