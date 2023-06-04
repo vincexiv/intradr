@@ -7,7 +7,7 @@
 
 #create-bot .create-bot-main-area {
     width: calc(50vw - 2*var(--margin-primary));
-    height: calc(70vh - 2*var(--margin-primary));
+    height: calc(85vh - 10*var(--margin-primary) - 0.5rem);
     padding: 1rem;
     background-color: var(--color-primary);
     overflow-y: auto;
@@ -48,18 +48,25 @@
         display: grid;
         row-gap: 3rem;
         grid-template-areas: 
-                "c"
-                "a"
-                "b";
+                "c c b"
+                "a a b";
+        grid-template-columns: auto 3fr;
     }
 
-    #create-bot #left-side,
-    #create-bot #right-side {
+    #create-bot #rigth-side {
+        width: 20rem;
+        min-height: 20rem;
+        height: max-content;
+        height: 100%;
+    }
+
+    #create-bot #left-side {
         display: flex;
         flex-direction: row;
         justify-content: center;
         min-height: 20rem;
         height: max-content;
+        margin-top: 0;
     }
 
     #create-bot #left-side {
@@ -81,12 +88,13 @@
     }
 }
 
-@media screen and (max-width: 60rem){
+@media screen and (max-width: 55rem){
     #create-bot {
         grid-template-areas: 
                 "c"
                 "a"
                 "b";
+        grid-template-columns: 1fr;
     }
 
     #create-bot #middle-side, #create-bot #signal {

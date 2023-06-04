@@ -3,7 +3,7 @@
     padding: 1rem;
     width: calc(20vw - 4*var(--margin-primary));
     margin: 1rem;
-    min-width: 16rem;
+    min-width: 23rem;
 }
 
 #plain-list  .plain-list-title{

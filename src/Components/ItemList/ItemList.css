@@ -1,6 +1,6 @@
 #item-list {
     width: calc(25vw - 2*var(--margin-primary));
-    min-width: 15rem;
+    min-width: 25rem;
     min-height: 20rem;
     background-color: var(--color-primary);
     padding-bottom: 1rem;

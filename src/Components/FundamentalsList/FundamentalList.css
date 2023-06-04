@@ -2,7 +2,7 @@
     border: solid white 0.1rem;
     padding: 1rem;
     width: calc(20vw - 4*var(--margin-primary));
-    min-width: 13rem;
+    min-width: 23rem;
 }
 
 #fundamental-list .display-none {
