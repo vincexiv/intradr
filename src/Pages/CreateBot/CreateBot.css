@@ -15,7 +15,7 @@
 }
 
 #create-bot #right-side {
-    height: calc(85vh - 2*var(--margin-primary));
+    height: calc(85vh - 2.5*var(--margin-primary));
     min-height: 20rem;
     background-color: var(--color-primary);
     padding: 0;
@@ -50,14 +50,16 @@
         grid-template-areas: 
                 "c c b"
                 "a a a";
-        grid-template-columns: 1fr 1fr auto;
+        grid-template-columns: auto 25rem;
     }
 
-    #create-bot #rigth-side {
-        width: 20rem;
+    #create-bot #middle-side {
+        width: calc(100vw - 31rem);
+    }
+
+    #create-bot #right-side {
+        width: 25rem;
         min-height: 20rem;
-        height: max-content;
-        height: 100%;
     }
 
     #create-bot #left-side {
@@ -97,13 +99,18 @@
         grid-template-columns: 1fr;
     }
 
+    #create-bot #middle-side {
+        width: calc(100vw - 6rem);
+        margin: 0;
+    }
+
     #create-bot #middle-side, #create-bot #signal {
         height: max-content;
     }
 
-    #create-bot .create-bot-main-area {
+    /* #create-bot .create-bot-main-area {
         width: calc(100% - 2rem);
-    }
+    } */
 
     #create-bot #left-side,
     #create-bot #right-side {
