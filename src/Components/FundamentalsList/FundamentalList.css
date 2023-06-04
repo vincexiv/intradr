@@ -49,7 +49,7 @@
 }
 
 #fundamental-list .header .long-name {
-    width: 14vw;
+    width: min(80%, 15rem);
     overflow-x: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
