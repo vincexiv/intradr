@@ -27,4 +27,5 @@
     font-weight: 900;
     text-justify: center;
     margin: var(--margin-primary);
+    opacity: 0.8;
 }
