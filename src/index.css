@@ -1,5 +1,5 @@
 :root {
-  font-size: 10px;
+  font-size: clamp(8px, 1.3vh, 18px);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: rgba(0, 0, 0, 0.8);
   --color-background: rgb(240, 240, 240);
