@@ -44,7 +44,7 @@
 
 
 
-@media only screen and (max-width: 70rem){
+@media only screen and (max-aspect-ratio: 1.6){
 
     #create-bot {
         display: grid;
@@ -90,7 +90,7 @@
     }
 }
 
-@media screen and (max-width: 55rem){
+@media screen and (max-aspect-ratio: 1.2){
     #create-bot {
         grid-template-areas: 
                 "c"
