@@ -100,17 +100,13 @@
     }
 
     #create-bot #middle-side {
-        width: calc(100vw - 6rem);
+        width: calc(100vw - 5.2rem);
         margin: 0;
     }
 
     #create-bot #middle-side, #create-bot #signal {
         height: max-content;
     }
-
-    /* #create-bot .create-bot-main-area {
-        width: calc(100% - 2rem);
-    } */
 
     #create-bot #left-side,
     #create-bot #right-side {
