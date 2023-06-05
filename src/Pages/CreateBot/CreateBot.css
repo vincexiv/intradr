@@ -17,7 +17,7 @@
 
 #create-bot #right-side {
     --height-var: calc(85vh - 2.5*var(--margin-primary));
-    height: calc(var(--height-var) - 1rem);
+    height: calc(var(--height-var) - 1.5rem);
     background-color: var(--color-primary);
     padding: 0;
     margin: 0;
