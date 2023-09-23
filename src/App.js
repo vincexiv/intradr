@@ -11,7 +11,7 @@ function App() {
   const location = useLocation()
   const [componentState, setComponentState] = useState({
     activePage: location.pathname || localStorage.getItem('activePage') || 'home',
-    action: "do-your-math",
+    action: "optimize-portfolio",
     fullAssetList: availableAssets,
     untrackedAssets: getUntrackedAssets(availableAssets, []),
     trackedAssets: [],

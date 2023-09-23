@@ -65,7 +65,7 @@ function CreateBot({componentState, setComponentState}){
             return <InspectVariables componentState={componentState} setComponentState={setComponentState} />
         }else if(actionName === "backtest"){
             return <Backtest />
-        }else if(actionName === "set-configurations"){
+        }else if(actionName === "optimize-portfolio"){
             const constraints = <Constraints
                                         componentState={componentState}
                                         updateConstraintCount={updateConstraintCount}/> 

@@ -16,6 +16,12 @@ function MiddleSide({setComponentState, getActionComponent}){
                 <ul className="actions">
                     <li className="margin-primary border-primary">
                         <Button
+                            btnStyles={{minWidth: "10rem"}} 
+                            text="set configurations"
+                            onBtnClick={()=>openAction('optimize-portfolio')} />
+                    </li>
+                    <li className="margin-primary border-primary">
+                        <Button
                             btnStyles={{minWidth: "10rem"}}
                             text="build strategy"
                             onBtnClick={()=>openAction('do-your-math')} />
@@ -31,12 +37,6 @@ function MiddleSide({setComponentState, getActionComponent}){
                             btnStyles={{minWidth: "10rem"}}
                             text="backtest"
                             onBtnClick={()=>openAction('backtest')} />
-                    </li>
-                    <li className="margin-primary border-primary">
-                        <Button
-                            btnStyles={{minWidth: "10rem"}} 
-                            text="set configurations"
-                            onBtnClick={()=>openAction('set-configurations')} />
                     </li>
                 </ul>
             </div>
